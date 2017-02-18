@@ -29,3 +29,12 @@ class TestOG(TestCase):
                                                 [0., 0., 0., 0., 0.],
                                                 [0.67, 2., 2., 2., 0.67]]))
         print("Done")
+
+    def test_calculate_oriented_gradient_vis(self):
+        img = cv2.imread('orig.png')
+        orig = np.copy(img)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+        img = img[:, :, 0]
+        object_under_test = OrientedGradientCalculator(img, 10, 90)
+        img = object_under_test.calculate()
+        cv2.imwrite('post_calculate2.png', img)

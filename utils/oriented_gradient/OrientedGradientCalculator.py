@@ -1,5 +1,5 @@
 import numpy as np
-
+import scipy.signal as sig_filters
 from utils.RotationAdapter.RotationAdapter import RotationAdapter
 
 
@@ -17,6 +17,8 @@ class OrientedGradientCalculator(RotationAdapter):
                 output[i, j] = self._calculate_single_oriented_gradient(
                     self._rotated[i - self.radius:i + self.radius, j - self.radius:j + self.radius])
         output = np.around(output, 3)
+        output = sig_filters.savgol_filter(output, self.radius, 2, axis=0)
+        output = sig_filters.savgol_filter(output, self.radius, 2, axis=1)
         self._rotated = output
 
     def calculate(self):
