@@ -14,7 +14,7 @@ class TestOG(TestCase):
         self.img = self.img[:, :, 0]
 
     def test_calculate_oriented_gradient(self):
-        object_under_test = OrientedGradientCalculator(self.img, 6, 0)
+        object_under_test = OrientedGradientCalculator(self.img, 3, 0)
         result = object_under_test.calculate()
         np.testing.assert_array_almost_equal(np.full((result.shape[0], result.shape[1]), 0.), result)
         print("Done")
