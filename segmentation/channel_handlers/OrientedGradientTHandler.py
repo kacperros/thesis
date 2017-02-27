@@ -7,6 +7,7 @@ from sklearn.cluster import KMeans
 from segmentation.channel_handlers.OrientedGradientTSubhandlers import OrientedGradientTOrientedGaussianSubhandler, \
     OrientedGradientTGaussianDifferenceSubhandler
 from segmentation.channel_handlers.abstract.OrientedGradientChannelHandler import OrientedGradientChannelHandler
+from utils.oriented_gradient.OrientedGradientCalculator import OrientedGradientCalculator
 
 
 class OrientedGradientTHandler(OrientedGradientChannelHandler):
@@ -22,7 +23,8 @@ class OrientedGradientTHandler(OrientedGradientChannelHandler):
     def handle(self):
         self.__parallel_filter()
         self.__combine_images()
-        return self.__set_textons()
+        texton_img = self.__set_textons()
+        return OrientedGradientCalculator(texton_img, self.radius, self.angle).calculate()
 
     def __parallel_filter(self):
         orders = [(1, 1) for i in range(0, 8)]
