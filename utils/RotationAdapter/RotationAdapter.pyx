@@ -1,5 +1,3 @@
-from copy import copy
-
 import numpy as np
 from scipy import ndimage as ndim
 
@@ -7,10 +5,10 @@ from scipy import ndimage as ndim
 class RotationAdapter:
     def __init__(self, image):
         self.original = image
-        self._rotated = copy(self.original)
+        self._rotated = np.copy(self.original)
 
     def _rotate(self, angle):
-        self._rotated = ndim.rotate(copy(self.original), angle)
+        self._rotated = ndim.rotate(np.copy(self.original), angle)
 
     def _operate(self):
         pass
