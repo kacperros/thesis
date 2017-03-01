@@ -1,8 +1,8 @@
 import numpy as np
 import scipy.signal as sig_filters
-from utils.RotationAdapter.RotationAdapter import RotationAdapter
-import cv2
 from scipy import ndimage as ndim
+
+from utils.RotationAdapter.RotationAdapter import RotationAdapter
 
 
 class OrientedGradientCalculator(RotationAdapter):
@@ -23,7 +23,7 @@ class OrientedGradientCalculator(RotationAdapter):
         self._extend_img(rows, cols)
         for i in range(self.radius, rows + self.radius):
             for j in range(self.radius, cols + self.radius):
-                output[i-self.radius, j-self.radius] = self._calculate_single_oriented_gradient(
+                output[i - self.radius, j - self.radius] = self._calculate_single_oriented_gradient(
                     self._rotated[i - self.radius:i + self.radius, j - self.radius:j + self.radius])
         output = np.around(output, 3)
         output = sig_filters.savgol_filter(output, 3, 2, axis=0)

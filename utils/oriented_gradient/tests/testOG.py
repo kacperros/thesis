@@ -2,6 +2,7 @@ from unittest import TestCase
 
 import cv2
 import numpy as np
+import time
 from scipy import ndimage
 
 from utils.oriented_gradient.OrientedGradientCalculator import OrientedGradientCalculator
@@ -32,6 +33,7 @@ class TestOG(TestCase):
         print("Done")
 
     def test_calculate_oriented_gradient_vis(self):
+        time_start = time.time()
         channel = 2
         img = cv2.imread('orig.png')
         orig = np.copy(img)
@@ -47,6 +49,7 @@ class TestOG(TestCase):
         img = img.astype(np.uint8)
         img = cv2.applyColorMap(img, cv2.COLORMAP_JET)
         cv2.imwrite('post_calculate.png', img)
+        print(time.time() - time_start)
 
     def test_calculate_oriented_gradient_vis2(self):
         img = cv2.imread('black_white_halves.jpg')
