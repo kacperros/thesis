@@ -32,9 +32,16 @@ class AngledmPBCalculator:
             OrientedGradientbHandler,
             OrientedGradientTHandler
         ]
-        self.gradients =[]
+        self.gradients = None
+        self.prepared = False
 
     def calculate(self):
+        if not self.prepared:
+            raise RuntimeError('Sir, you need to prepare before calculation')
+        return np.sum(np.array([self.gradients[i, j] * self.alfas[i, j] for i in range(0, self.alfas.shape[0]) for j in
+                                range(0, self.alfas.shape[1])]), axis=0)
+
+    def prepare_gradients(self):
         jobs = []
         gradients = np.zeros((self.alfas.shape[0], self.alfas.shape[1], self.img.shape[0], self.img.shape[1]))
         for i in range(0, self.variables.shape[0]):
@@ -50,5 +57,5 @@ class AngledmPBCalculator:
         for job in jobs:
             job.join()
         self.gradients = gradients
-        return np.sum(np.array([gradients[i, j] * self.alfas[i, j] for i in range(0, self.alfas.shape[0]) for j in
-                                range(0, self.alfas.shape[1])]), axis=0)
+        self.prepared = True
+        return self.gradients
