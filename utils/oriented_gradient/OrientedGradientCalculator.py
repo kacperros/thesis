@@ -1,6 +1,8 @@
 import numpy as np
 import scipy.signal as sig_filters
 from utils.RotationAdapter.RotationAdapter import RotationAdapter
+import cv2
+from scipy import ndimage as ndim
 
 
 class OrientedGradientCalculator(RotationAdapter):
@@ -8,6 +10,11 @@ class OrientedGradientCalculator(RotationAdapter):
         RotationAdapter.__init__(self, img)
         self.radius = radius - 1
         self.angle = angle
+
+    def _rotate(self, angle):
+        self._rotated = np.copy(self.original)
+        self._extend_img(self.original.shape[0], self.original.shape[1])
+        self._rotated = ndim.rotate(self._rotated, angle)
 
     def _operate(self):
         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
