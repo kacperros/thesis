@@ -1,9 +1,11 @@
+import multiprocessing
+
 import numpy as np
 import scipy.signal as sig_filters
 from scipy import ndimage as ndim
-import multiprocessing
-import cv2
+
 from utils.RotationAdapter.RotationAdapter import RotationAdapter
+
 
 class OrientedGradientCalculator(RotationAdapter):
     def __init__(self, img, radius, angle):
@@ -19,16 +21,14 @@ class OrientedGradientCalculator(RotationAdapter):
 
     def _operate(self):
         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
-
         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
-        self._extend_img(rows, cols)
-        row_bounds = [0, int(rows/2), rows]
-        col_bounds = [0, int(cols/2), cols]
+        row_bounds = [0, int(rows / 2), rows]
+        col_bounds = [0, int(cols / 2), cols]
         jobs = []
         for i in range(0, 2):
             for j in range(0, 2):
-                p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
-                                                                                col_bounds[j], col_bounds[j+1]))
+                p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
+                                                                                    col_bounds[j], col_bounds[j + 1]))
                 p.start()
                 jobs.append(p)
         for k in range(0, 4):

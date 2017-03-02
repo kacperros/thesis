@@ -631,7 +631,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "OrientedGradientCalculator.py",
+  "OrientedGradientCalculator.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -979,7 +979,6 @@ static const char __pyx_k_p[] = "p";
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k__11[] = "*";
 static const char __pyx_k_add[] = "add";
-static const char __pyx_k_cv2[] = "cv2";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_get[] = "get";
 static const char __pyx_k_img[] = "img";
@@ -1056,7 +1055,7 @@ static const char __pyx_k_multiprocessing[] = "multiprocessing";
 static const char __pyx_k_calculate_image_part[] = "calculate_image_part";
 static const char __pyx_k_OrientedGradientCalculator[] = "OrientedGradientCalculator";
 static const char __pyx_k_calculate_single_oriented_gradi[] = "_calculate_single_oriented_gradient";
-static const char __pyx_k_home_kacper_Projects_INZ_Clothe[] = "/home/kacper/Projects/INZ/ClothesWare/utils/oriented_gradient/OrientedGradientCalculator.py";
+static const char __pyx_k_home_kacper_Projects_INZ_Clothe[] = "/home/kacper/Projects/INZ/ClothesWare/utils/oriented_gradient/OrientedGradientCalculator.pyx";
 static const char __pyx_k_OrientedGradientCalculator___ini[] = "OrientedGradientCalculator.__init__";
 static const char __pyx_k_OrientedGradientCalculator__calc[] = "OrientedGradientCalculator._calculate_single_oriented_gradient";
 static const char __pyx_k_OrientedGradientCalculator__exte[] = "OrientedGradientCalculator._extend_img";
@@ -1092,7 +1091,6 @@ static PyObject *__pyx_n_s_col_end;
 static PyObject *__pyx_n_s_col_start;
 static PyObject *__pyx_n_s_cols;
 static PyObject *__pyx_n_s_copy;
-static PyObject *__pyx_n_s_cv2;
 static PyObject *__pyx_n_s_dists;
 static PyObject *__pyx_n_s_dists2;
 static PyObject *__pyx_n_s_divide;
@@ -1198,7 +1196,7 @@ static PyObject *__pyx_codeobj__21;
 static PyObject *__pyx_codeobj__23;
 static PyObject *__pyx_codeobj__25;
 
-/* "OrientedGradientCalculator.py":9
+/* "OrientedGradientCalculator.pyx":11
  * 
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):             # <<<<<<<<<<<<<<
@@ -1239,21 +1237,21 @@ static PyObject *__pyx_pw_26OrientedGradientCalculator_26OrientedGradientCalcula
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_img)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, 1); __PYX_ERR(0, 9, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, 1); __PYX_ERR(0, 11, __pyx_L3_error)
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_radius)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, 2); __PYX_ERR(0, 9, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, 2); __PYX_ERR(0, 11, __pyx_L3_error)
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_angle)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, 3); __PYX_ERR(0, 9, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, 3); __PYX_ERR(0, 11, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 9, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 11, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -1270,7 +1268,7 @@ static PyObject *__pyx_pw_26OrientedGradientCalculator_26OrientedGradientCalcula
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 9, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 11, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("OrientedGradientCalculator.OrientedGradientCalculator.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -1293,16 +1291,16 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "OrientedGradientCalculator.py":10
+  /* "OrientedGradientCalculator.pyx":12
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):
  *         RotationAdapter.__init__(self, img)             # <<<<<<<<<<<<<<
  *         self.radius = radius - 1
  *         self.angle = angle
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_RotationAdapter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_RotationAdapter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_init); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -1320,7 +1318,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_self, __pyx_v_img};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -1328,13 +1326,13 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_self, __pyx_v_img};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 10, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 12, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_2) {
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -1345,44 +1343,44 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     __Pyx_INCREF(__pyx_v_img);
     __Pyx_GIVEREF(__pyx_v_img);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_img);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":11
+  /* "OrientedGradientCalculator.pyx":13
  *     def __init__(self, img, radius, angle):
  *         RotationAdapter.__init__(self, img)
  *         self.radius = radius - 1             # <<<<<<<<<<<<<<
  *         self.angle = angle
  *         self.parts_queue = multiprocessing.Queue()
  */
-  __pyx_t_1 = __Pyx_PyInt_SubtractObjC(__pyx_v_radius, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_SubtractObjC(__pyx_v_radius, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_radius, __pyx_t_1) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_radius, __pyx_t_1) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":12
+  /* "OrientedGradientCalculator.pyx":14
  *         RotationAdapter.__init__(self, img)
  *         self.radius = radius - 1
  *         self.angle = angle             # <<<<<<<<<<<<<<
  *         self.parts_queue = multiprocessing.Queue()
  * 
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_angle, __pyx_v_angle) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_angle, __pyx_v_angle) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":13
+  /* "OrientedGradientCalculator.pyx":15
  *         self.radius = radius - 1
  *         self.angle = angle
  *         self.parts_queue = multiprocessing.Queue()             # <<<<<<<<<<<<<<
  * 
  *     def _rotate(self, angle):
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_multiprocessing); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_multiprocessing); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Queue); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Queue); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -1396,17 +1394,17 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_parts_queue, __pyx_t_1) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_parts_queue, __pyx_t_1) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":9
+  /* "OrientedGradientCalculator.pyx":11
  * 
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):             # <<<<<<<<<<<<<<
@@ -1430,7 +1428,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":15
+/* "OrientedGradientCalculator.pyx":17
  *         self.parts_queue = multiprocessing.Queue()
  * 
  *     def _rotate(self, angle):             # <<<<<<<<<<<<<<
@@ -1467,11 +1465,11 @@ static PyObject *__pyx_pw_26OrientedGradientCalculator_26OrientedGradientCalcula
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_angle)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_rotate", 1, 2, 2, 1); __PYX_ERR(0, 15, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("_rotate", 1, 2, 2, 1); __PYX_ERR(0, 17, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_rotate") < 0)) __PYX_ERR(0, 15, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_rotate") < 0)) __PYX_ERR(0, 17, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -1484,7 +1482,7 @@ static PyObject *__pyx_pw_26OrientedGradientCalculator_26OrientedGradientCalcula
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_rotate", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 15, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("_rotate", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 17, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("OrientedGradientCalculator.OrientedGradientCalculator._rotate", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -1509,19 +1507,19 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("_rotate", 0);
 
-  /* "OrientedGradientCalculator.py":16
+  /* "OrientedGradientCalculator.pyx":18
  * 
  *     def _rotate(self, angle):
  *         self._rotated = np.copy(self.original)             # <<<<<<<<<<<<<<
  *         self._extend_img(self.original.shape[0], self.original.shape[1])
  *         self._rotated = ndim.rotate(self._rotated, angle)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_original); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_original); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -1534,14 +1532,14 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -1550,51 +1548,51 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 18, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":17
+  /* "OrientedGradientCalculator.pyx":19
  *     def _rotate(self, angle):
  *         self._rotated = np.copy(self.original)
  *         self._extend_img(self.original.shape[0], self.original.shape[1])             # <<<<<<<<<<<<<<
  *         self._rotated = ndim.rotate(self._rotated, angle)
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_extend_img); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_extend_img); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_original); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_original); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_original); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_original); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -1612,7 +1610,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_5, __pyx_t_2};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -1622,7 +1620,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_5, __pyx_t_2};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -1630,7 +1628,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 17, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 19, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -1641,26 +1639,26 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_t_2);
     __pyx_t_5 = 0;
     __pyx_t_2 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 17, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":18
+  /* "OrientedGradientCalculator.pyx":20
  *         self._rotated = np.copy(self.original)
  *         self._extend_img(self.original.shape[0], self.original.shape[1])
  *         self._rotated = ndim.rotate(self._rotated, angle)             # <<<<<<<<<<<<<<
  * 
  *     def _operate(self):
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_ndim); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_ndim); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_rotate); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = NULL;
   __pyx_t_6 = 0;
@@ -1677,7 +1675,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_7)) {
     PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_t_3, __pyx_v_angle};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1686,14 +1684,14 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_7)) {
     PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_t_3, __pyx_v_angle};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 18, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 20, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_2) {
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -1704,15 +1702,15 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     __Pyx_GIVEREF(__pyx_v_angle);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_6, __pyx_v_angle);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":15
+  /* "OrientedGradientCalculator.pyx":17
  *         self.parts_queue = multiprocessing.Queue()
  * 
  *     def _rotate(self, angle):             # <<<<<<<<<<<<<<
@@ -1738,12 +1736,12 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":20
+/* "OrientedGradientCalculator.pyx":22
  *         self._rotated = ndim.rotate(self._rotated, angle)
  * 
  *     def _operate(self):             # <<<<<<<<<<<<<<
  *         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
- * 
+ *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
  */
 
 /* Python wrapper */
@@ -1780,48 +1778,48 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  int __pyx_t_6;
-  Py_ssize_t __pyx_t_7;
-  PyObject *(*__pyx_t_8)(PyObject *);
-  Py_ssize_t __pyx_t_9;
-  PyObject *(*__pyx_t_10)(PyObject *);
+  Py_ssize_t __pyx_t_6;
+  PyObject *(*__pyx_t_7)(PyObject *);
+  Py_ssize_t __pyx_t_8;
+  PyObject *(*__pyx_t_9)(PyObject *);
+  PyObject *__pyx_t_10 = NULL;
   PyObject *__pyx_t_11 = NULL;
   PyObject *__pyx_t_12 = NULL;
   PyObject *__pyx_t_13 = NULL;
-  PyObject *__pyx_t_14 = NULL;
-  int __pyx_t_15;
-  long __pyx_t_16;
+  int __pyx_t_14;
+  long __pyx_t_15;
+  int __pyx_t_16;
   __Pyx_RefNannySetupContext("_operate", 0);
 
-  /* "OrientedGradientCalculator.py":21
+  /* "OrientedGradientCalculator.pyx":23
  * 
  *     def _operate(self):
  *         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))             # <<<<<<<<<<<<<<
- * 
  *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
+ *         row_bounds = [0, int(rows / 2), rows]
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_shape); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_shape); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2);
@@ -1840,14 +1838,14 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -1856,20 +1854,20 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
@@ -1878,27 +1876,27 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_output = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":23
+  /* "OrientedGradientCalculator.pyx":24
+ *     def _operate(self):
  *         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
- * 
  *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]             # <<<<<<<<<<<<<<
- *         self._extend_img(rows, cols)
- *         row_bounds = [0, int(rows/2), rows]
+ *         row_bounds = [0, int(rows / 2), rows]
+ *         col_bounds = [0, int(cols / 2), cols]
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_shape); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_rows = __pyx_t_1;
@@ -1906,67 +1904,11 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_cols = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "OrientedGradientCalculator.py":24
- * 
+  /* "OrientedGradientCalculator.pyx":25
+ *         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
  *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
- *         self._extend_img(rows, cols)             # <<<<<<<<<<<<<<
- *         row_bounds = [0, int(rows/2), rows]
- *         col_bounds = [0, int(cols/2), cols]
- */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_extend_img); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = NULL;
-  __pyx_t_6 = 0;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
-      __pyx_t_6 = 1;
-    }
-  }
-  #if CYTHON_FAST_PYCALL
-  if (PyFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_rows, __pyx_v_cols};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GOTREF(__pyx_t_3);
-  } else
-  #endif
-  #if CYTHON_FAST_PYCCALL
-  if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_rows, __pyx_v_cols};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GOTREF(__pyx_t_3);
-  } else
-  #endif
-  {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 24, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    if (__pyx_t_2) {
-      __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2); __pyx_t_2 = NULL;
-    }
-    __Pyx_INCREF(__pyx_v_rows);
-    __Pyx_GIVEREF(__pyx_v_rows);
-    PyTuple_SET_ITEM(__pyx_t_5, 0+__pyx_t_6, __pyx_v_rows);
-    __Pyx_INCREF(__pyx_v_cols);
-    __Pyx_GIVEREF(__pyx_v_cols);
-    PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_6, __pyx_v_cols);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  }
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-
-  /* "OrientedGradientCalculator.py":25
- *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
- *         self._extend_img(rows, cols)
- *         row_bounds = [0, int(rows/2), rows]             # <<<<<<<<<<<<<<
- *         col_bounds = [0, int(cols/2), cols]
+ *         row_bounds = [0, int(rows / 2), rows]             # <<<<<<<<<<<<<<
+ *         col_bounds = [0, int(cols / 2), cols]
  *         jobs = []
  */
   __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_v_rows, __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 25, __pyx_L1_error)
@@ -1988,10 +1930,10 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_row_bounds = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "OrientedGradientCalculator.py":26
- *         self._extend_img(rows, cols)
- *         row_bounds = [0, int(rows/2), rows]
- *         col_bounds = [0, int(cols/2), cols]             # <<<<<<<<<<<<<<
+  /* "OrientedGradientCalculator.pyx":26
+ *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
+ *         row_bounds = [0, int(rows / 2), rows]
+ *         col_bounds = [0, int(cols / 2), cols]             # <<<<<<<<<<<<<<
  *         jobs = []
  *         for i in range(0, 2):
  */
@@ -2014,9 +1956,9 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_col_bounds = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "OrientedGradientCalculator.py":27
- *         row_bounds = [0, int(rows/2), rows]
- *         col_bounds = [0, int(cols/2), cols]
+  /* "OrientedGradientCalculator.pyx":27
+ *         row_bounds = [0, int(rows / 2), rows]
+ *         col_bounds = [0, int(cols / 2), cols]
  *         jobs = []             # <<<<<<<<<<<<<<
  *         for i in range(0, 2):
  *             for j in range(0, 2):
@@ -2026,45 +1968,45 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_jobs = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "OrientedGradientCalculator.py":28
- *         col_bounds = [0, int(cols/2), cols]
+  /* "OrientedGradientCalculator.pyx":28
+ *         col_bounds = [0, int(cols / 2), cols]
  *         jobs = []
  *         for i in range(0, 2):             # <<<<<<<<<<<<<<
  *             for j in range(0, 2):
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
  */
   __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
-    __pyx_t_1 = __pyx_t_3; __Pyx_INCREF(__pyx_t_1); __pyx_t_7 = 0;
-    __pyx_t_8 = NULL;
+    __pyx_t_1 = __pyx_t_3; __Pyx_INCREF(__pyx_t_1); __pyx_t_6 = 0;
+    __pyx_t_7 = NULL;
   } else {
-    __pyx_t_7 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+    __pyx_t_6 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_8 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 28, __pyx_L1_error)
+    __pyx_t_7 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 28, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   for (;;) {
-    if (likely(!__pyx_t_8)) {
+    if (likely(!__pyx_t_7)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
-        if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_1)) break;
+        if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_3); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 28, __pyx_L1_error)
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_3); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 28, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 28, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 28, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       } else {
-        if (__pyx_t_7 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
+        if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_3); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 28, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_3); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 28, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 28, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 28, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       }
     } else {
-      __pyx_t_3 = __pyx_t_8(__pyx_t_1);
+      __pyx_t_3 = __pyx_t_7(__pyx_t_1);
       if (unlikely(!__pyx_t_3)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
@@ -2078,45 +2020,45 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "OrientedGradientCalculator.py":29
+    /* "OrientedGradientCalculator.pyx":29
  *         jobs = []
  *         for i in range(0, 2):
  *             for j in range(0, 2):             # <<<<<<<<<<<<<<
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
- *                                                                                 col_bounds[j], col_bounds[j+1]))
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
+ *                                                                                     col_bounds[j], col_bounds[j + 1]))
  */
     __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
-      __pyx_t_5 = __pyx_t_3; __Pyx_INCREF(__pyx_t_5); __pyx_t_9 = 0;
-      __pyx_t_10 = NULL;
+      __pyx_t_2 = __pyx_t_3; __Pyx_INCREF(__pyx_t_2); __pyx_t_8 = 0;
+      __pyx_t_9 = NULL;
     } else {
-      __pyx_t_9 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 29, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_10 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 29, __pyx_L1_error)
+      __pyx_t_8 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_9 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 29, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     for (;;) {
-      if (likely(!__pyx_t_10)) {
-        if (likely(PyList_CheckExact(__pyx_t_5))) {
-          if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_5)) break;
+      if (likely(!__pyx_t_9)) {
+        if (likely(PyList_CheckExact(__pyx_t_2))) {
+          if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_2)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_9); __Pyx_INCREF(__pyx_t_3); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 29, __pyx_L1_error)
+          __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_8); __Pyx_INCREF(__pyx_t_3); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 29, __pyx_L1_error)
           #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_5, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
+          __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           #endif
         } else {
-          if (__pyx_t_9 >= PyTuple_GET_SIZE(__pyx_t_5)) break;
+          if (__pyx_t_8 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_9); __Pyx_INCREF(__pyx_t_3); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 29, __pyx_L1_error)
+          __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_8); __Pyx_INCREF(__pyx_t_3); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 29, __pyx_L1_error)
           #else
-          __pyx_t_3 = PySequence_ITEM(__pyx_t_5, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
+          __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           #endif
         }
       } else {
-        __pyx_t_3 = __pyx_t_10(__pyx_t_5);
+        __pyx_t_3 = __pyx_t_9(__pyx_t_2);
         if (unlikely(!__pyx_t_3)) {
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
@@ -2130,17 +2072,17 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
       __Pyx_XDECREF_SET(__pyx_v_j, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "OrientedGradientCalculator.py":30
+      /* "OrientedGradientCalculator.pyx":30
  *         for i in range(0, 2):
  *             for j in range(0, 2):
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],             # <<<<<<<<<<<<<<
- *                                                                                 col_bounds[j], col_bounds[j+1]))
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],             # <<<<<<<<<<<<<<
+ *                                                                                     col_bounds[j], col_bounds[j + 1]))
  *                 p.start()
  */
       __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_multiprocessing); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Process); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 30, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Process); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 30, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -2150,159 +2092,159 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = PyObject_GetItem(__pyx_v_row_bounds, __pyx_v_i); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_11 = __Pyx_PyInt_AddObjC(__pyx_v_i, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 30, __pyx_L1_error)
+      __pyx_t_10 = __Pyx_PyInt_AddObjC(__pyx_v_i, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 30, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __pyx_t_11 = PyObject_GetItem(__pyx_v_row_bounds, __pyx_t_10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_12 = PyObject_GetItem(__pyx_v_row_bounds, __pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 30, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_12);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-      /* "OrientedGradientCalculator.py":31
+      /* "OrientedGradientCalculator.pyx":31
  *             for j in range(0, 2):
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
- *                                                                                 col_bounds[j], col_bounds[j+1]))             # <<<<<<<<<<<<<<
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
+ *                                                                                     col_bounds[j], col_bounds[j + 1]))             # <<<<<<<<<<<<<<
  *                 p.start()
  *                 jobs.append(p)
  */
-      __pyx_t_11 = PyObject_GetItem(__pyx_v_col_bounds, __pyx_v_j); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 31, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_v_j, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 31, __pyx_L1_error)
+      __pyx_t_10 = PyObject_GetItem(__pyx_v_col_bounds, __pyx_v_j); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 31, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __pyx_t_12 = __Pyx_PyInt_AddObjC(__pyx_v_j, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 31, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_12);
+      __pyx_t_13 = PyObject_GetItem(__pyx_v_col_bounds, __pyx_t_12); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 31, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      __pyx_t_14 = PyObject_GetItem(__pyx_v_col_bounds, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 31, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_14);
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-      /* "OrientedGradientCalculator.py":30
+      /* "OrientedGradientCalculator.pyx":30
  *         for i in range(0, 2):
  *             for j in range(0, 2):
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],             # <<<<<<<<<<<<<<
- *                                                                                 col_bounds[j], col_bounds[j+1]))
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],             # <<<<<<<<<<<<<<
+ *                                                                                     col_bounds[j], col_bounds[j + 1]))
  *                 p.start()
  */
-      __pyx_t_13 = PyTuple_New(4); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 30, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_13);
+      __pyx_t_12 = PyTuple_New(4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 30, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_12);
       __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_4);
-      __Pyx_GIVEREF(__pyx_t_12);
-      PyTuple_SET_ITEM(__pyx_t_13, 1, __pyx_t_12);
+      PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_11);
-      PyTuple_SET_ITEM(__pyx_t_13, 2, __pyx_t_11);
-      __Pyx_GIVEREF(__pyx_t_14);
-      PyTuple_SET_ITEM(__pyx_t_13, 3, __pyx_t_14);
+      PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_t_11);
+      __Pyx_GIVEREF(__pyx_t_10);
+      PyTuple_SET_ITEM(__pyx_t_12, 2, __pyx_t_10);
+      __Pyx_GIVEREF(__pyx_t_13);
+      PyTuple_SET_ITEM(__pyx_t_12, 3, __pyx_t_13);
       __pyx_t_4 = 0;
-      __pyx_t_12 = 0;
       __pyx_t_11 = 0;
-      __pyx_t_14 = 0;
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_args, __pyx_t_13) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 30, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_13);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_XDECREF_SET(__pyx_v_p, __pyx_t_13);
+      __pyx_t_10 = 0;
       __pyx_t_13 = 0;
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_args, __pyx_t_12) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+      __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 30, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_12);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_p, __pyx_t_12);
+      __pyx_t_12 = 0;
 
-      /* "OrientedGradientCalculator.py":32
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
- *                                                                                 col_bounds[j], col_bounds[j+1]))
+      /* "OrientedGradientCalculator.pyx":32
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
+ *                                                                                     col_bounds[j], col_bounds[j + 1]))
  *                 p.start()             # <<<<<<<<<<<<<<
  *                 jobs.append(p)
  *         for k in range(0, 4):
  */
       __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_p, __pyx_n_s_start); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 32, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = NULL;
+      __pyx_t_5 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-        if (likely(__pyx_t_2)) {
+        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_5)) {
           PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-          __Pyx_INCREF(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_5);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_3, function);
         }
       }
-      if (__pyx_t_2) {
-        __pyx_t_13 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 32, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (__pyx_t_5) {
+        __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 32, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       } else {
-        __pyx_t_13 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 32, __pyx_L1_error)
+        __pyx_t_12 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 32, __pyx_L1_error)
       }
-      __Pyx_GOTREF(__pyx_t_13);
+      __Pyx_GOTREF(__pyx_t_12);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-      /* "OrientedGradientCalculator.py":33
- *                                                                                 col_bounds[j], col_bounds[j+1]))
+      /* "OrientedGradientCalculator.pyx":33
+ *                                                                                     col_bounds[j], col_bounds[j + 1]))
  *                 p.start()
  *                 jobs.append(p)             # <<<<<<<<<<<<<<
  *         for k in range(0, 4):
  *             res = self.parts_queue.get()
  */
-      __pyx_t_15 = __Pyx_PyList_Append(__pyx_v_jobs, __pyx_v_p); if (unlikely(__pyx_t_15 == -1)) __PYX_ERR(0, 33, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_jobs, __pyx_v_p); if (unlikely(__pyx_t_14 == -1)) __PYX_ERR(0, 33, __pyx_L1_error)
 
-      /* "OrientedGradientCalculator.py":29
+      /* "OrientedGradientCalculator.pyx":29
  *         jobs = []
  *         for i in range(0, 2):
  *             for j in range(0, 2):             # <<<<<<<<<<<<<<
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
- *                                                                                 col_bounds[j], col_bounds[j+1]))
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
+ *                                                                                     col_bounds[j], col_bounds[j + 1]))
  */
     }
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "OrientedGradientCalculator.py":28
- *         col_bounds = [0, int(cols/2), cols]
+    /* "OrientedGradientCalculator.pyx":28
+ *         col_bounds = [0, int(cols / 2), cols]
  *         jobs = []
  *         for i in range(0, 2):             # <<<<<<<<<<<<<<
  *             for j in range(0, 2):
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
  */
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":34
+  /* "OrientedGradientCalculator.pyx":34
  *                 p.start()
  *                 jobs.append(p)
  *         for k in range(0, 4):             # <<<<<<<<<<<<<<
  *             res = self.parts_queue.get()
  *             output[res[1]:res[2], res[3]:res[4]] = res[0]
  */
-  for (__pyx_t_16 = 0; __pyx_t_16 < 4; __pyx_t_16+=1) {
-    __pyx_v_k = __pyx_t_16;
+  for (__pyx_t_15 = 0; __pyx_t_15 < 4; __pyx_t_15+=1) {
+    __pyx_v_k = __pyx_t_15;
 
-    /* "OrientedGradientCalculator.py":35
+    /* "OrientedGradientCalculator.pyx":35
  *                 jobs.append(p)
  *         for k in range(0, 4):
  *             res = self.parts_queue.get()             # <<<<<<<<<<<<<<
  *             output[res[1]:res[2], res[3]:res[4]] = res[0]
  *         for job in jobs:
  */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_parts_queue); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 35, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_13))) {
-      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_13);
-      if (likely(__pyx_t_5)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_13);
-        __Pyx_INCREF(__pyx_t_5);
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_parts_queue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_get); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 35, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_12))) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_12);
+      if (likely(__pyx_t_2)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_12);
+        __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_13, function);
+        __Pyx_DECREF_SET(__pyx_t_12, function);
       }
     }
-    if (__pyx_t_5) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (__pyx_t_2) {
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else {
-      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_12); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
     }
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_XDECREF_SET(__pyx_v_res, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "OrientedGradientCalculator.py":36
+    /* "OrientedGradientCalculator.pyx":36
  *         for k in range(0, 4):
  *             res = self.parts_queue.get()
  *             output[res[1]:res[2], res[3]:res[4]] = res[0]             # <<<<<<<<<<<<<<
@@ -2311,84 +2253,84 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
  */
     __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_res, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_13 = __Pyx_GetItemInt(__pyx_v_res, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 36, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_res, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = PySlice_New(__pyx_t_13, __pyx_t_5, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_res, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_13 = __Pyx_GetItemInt(__pyx_v_res, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 36, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_2 = PySlice_New(__pyx_t_5, __pyx_t_13, Py_None); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_GetItemInt(__pyx_v_res, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_res, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyTuple_New(2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 36, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
+    __pyx_t_3 = PySlice_New(__pyx_t_12, __pyx_t_2, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_res, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_12 = __Pyx_GetItemInt(__pyx_v_res, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __pyx_t_5 = PySlice_New(__pyx_t_2, __pyx_t_12, Py_None); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __pyx_t_12 = PyTuple_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
     __Pyx_GIVEREF(__pyx_t_3);
-    PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_3);
-    __Pyx_GIVEREF(__pyx_t_2);
-    PyTuple_SET_ITEM(__pyx_t_13, 1, __pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_3);
+    __Pyx_GIVEREF(__pyx_t_5);
+    PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_t_5);
     __pyx_t_3 = 0;
-    __pyx_t_2 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_output, __pyx_t_13, __pyx_t_1) < 0)) __PYX_ERR(0, 36, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    __pyx_t_5 = 0;
+    if (unlikely(PyObject_SetItem(__pyx_v_output, __pyx_t_12, __pyx_t_1) < 0)) __PYX_ERR(0, 36, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "OrientedGradientCalculator.py":37
+  /* "OrientedGradientCalculator.pyx":37
  *             res = self.parts_queue.get()
  *             output[res[1]:res[2], res[3]:res[4]] = res[0]
  *         for job in jobs:             # <<<<<<<<<<<<<<
  *             job.join()
  *         output = np.around(output, 3)
  */
-  __pyx_t_1 = __pyx_v_jobs; __Pyx_INCREF(__pyx_t_1); __pyx_t_7 = 0;
+  __pyx_t_1 = __pyx_v_jobs; __Pyx_INCREF(__pyx_t_1); __pyx_t_6 = 0;
   for (;;) {
-    if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_1)) break;
+    if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_13 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_7); __Pyx_INCREF(__pyx_t_13); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 37, __pyx_L1_error)
+    __pyx_t_12 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_6); __Pyx_INCREF(__pyx_t_12); __pyx_t_6++; if (unlikely(0 < 0)) __PYX_ERR(0, 37, __pyx_L1_error)
     #else
-    __pyx_t_13 = PySequence_ITEM(__pyx_t_1, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 37, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
+    __pyx_t_12 = PySequence_ITEM(__pyx_t_1, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 37, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
     #endif
-    __Pyx_XDECREF_SET(__pyx_v_job, __pyx_t_13);
-    __pyx_t_13 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_job, __pyx_t_12);
+    __pyx_t_12 = 0;
 
-    /* "OrientedGradientCalculator.py":38
+    /* "OrientedGradientCalculator.pyx":38
  *             output[res[1]:res[2], res[3]:res[4]] = res[0]
  *         for job in jobs:
  *             job.join()             # <<<<<<<<<<<<<<
  *         output = np.around(output, 3)
  *         output = sig_filters.savgol_filter(output, 3, 2, axis=0)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_job, __pyx_n_s_join); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_job, __pyx_n_s_join); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 38, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_3 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_5);
       if (likely(__pyx_t_3)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
         __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_2, function);
+        __Pyx_DECREF_SET(__pyx_t_5, function);
       }
     }
     if (__pyx_t_3) {
-      __pyx_t_13 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 38, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 38, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
-      __pyx_t_13 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 38, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 38, __pyx_L1_error)
     }
-    __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    __Pyx_GOTREF(__pyx_t_12);
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-    /* "OrientedGradientCalculator.py":37
+    /* "OrientedGradientCalculator.pyx":37
  *             res = self.parts_queue.get()
  *             output[res[1]:res[2], res[3]:res[4]] = res[0]
  *         for job in jobs:             # <<<<<<<<<<<<<<
@@ -2398,67 +2340,67 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":39
+  /* "OrientedGradientCalculator.pyx":39
  *         for job in jobs:
  *             job.join()
  *         output = np.around(output, 3)             # <<<<<<<<<<<<<<
  *         output = sig_filters.savgol_filter(output, 3, 2, axis=0)
  *         output = sig_filters.savgol_filter(output, 3, 2, axis=1)
  */
-  __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 39, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_around); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_13 = NULL;
-  __pyx_t_6 = 0;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_13)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_13);
+  __pyx_t_12 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_around); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  __pyx_t_12 = NULL;
+  __pyx_t_16 = 0;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
+    __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_5);
+    if (likely(__pyx_t_12)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_12);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-      __pyx_t_6 = 1;
+      __Pyx_DECREF_SET(__pyx_t_5, function);
+      __pyx_t_16 = 1;
     }
   }
   #if CYTHON_FAST_PYCALL
-  if (PyFunction_Check(__pyx_t_2)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_13, __pyx_v_output, __pyx_int_3};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
-    __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+  if (PyFunction_Check(__pyx_t_5)) {
+    PyObject *__pyx_temp[3] = {__pyx_t_12, __pyx_v_output, __pyx_int_3};
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   #if CYTHON_FAST_PYCCALL
-  if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_13, __pyx_v_output, __pyx_int_3};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
-    __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+  if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
+    PyObject *__pyx_temp[3] = {__pyx_t_12, __pyx_v_output, __pyx_int_3};
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_3 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 39, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 39, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (__pyx_t_13) {
-      __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_13); __pyx_t_13 = NULL;
+    if (__pyx_t_12) {
+      __Pyx_GIVEREF(__pyx_t_12); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_12); __pyx_t_12 = NULL;
     }
     __Pyx_INCREF(__pyx_v_output);
     __Pyx_GIVEREF(__pyx_v_output);
-    PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_6, __pyx_v_output);
+    PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_16, __pyx_v_output);
     __Pyx_INCREF(__pyx_int_3);
     __Pyx_GIVEREF(__pyx_int_3);
-    PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_6, __pyx_int_3);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
+    PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_16, __pyx_int_3);
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":40
+  /* "OrientedGradientCalculator.pyx":40
  *             job.join()
  *         output = np.around(output, 3)
  *         output = sig_filters.savgol_filter(output, 3, 2, axis=0)             # <<<<<<<<<<<<<<
@@ -2467,8 +2409,8 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
  */
   __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_sig_filters); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_savgol_filter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_savgol_filter); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -2484,49 +2426,49 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_axis, __pyx_int_0) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
-  __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 40, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_13);
-  __pyx_t_13 = 0;
+  __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_12);
+  __pyx_t_12 = 0;
 
-  /* "OrientedGradientCalculator.py":41
+  /* "OrientedGradientCalculator.pyx":41
  *         output = np.around(output, 3)
  *         output = sig_filters.savgol_filter(output, 3, 2, axis=0)
  *         output = sig_filters.savgol_filter(output, 3, 2, axis=1)             # <<<<<<<<<<<<<<
  *         self._rotated = output
  * 
  */
-  __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_sig_filters); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 41, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_savgol_filter); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_GetModuleGlobalName(__pyx_n_s_sig_filters); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_savgol_filter); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_13 = PyTuple_New(3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 41, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  __pyx_t_12 = PyTuple_New(3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
   __Pyx_INCREF(__pyx_v_output);
   __Pyx_GIVEREF(__pyx_v_output);
-  PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_v_output);
+  PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_v_output);
   __Pyx_INCREF(__pyx_int_3);
   __Pyx_GIVEREF(__pyx_int_3);
-  PyTuple_SET_ITEM(__pyx_t_13, 1, __pyx_int_3);
+  PyTuple_SET_ITEM(__pyx_t_12, 1, __pyx_int_3);
   __Pyx_INCREF(__pyx_int_2);
   __Pyx_GIVEREF(__pyx_int_2);
-  PyTuple_SET_ITEM(__pyx_t_13, 2, __pyx_int_2);
+  PyTuple_SET_ITEM(__pyx_t_12, 2, __pyx_int_2);
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_axis, __pyx_int_1) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_12, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_2);
-  __pyx_t_2 = 0;
+  __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_5);
+  __pyx_t_5 = 0;
 
-  /* "OrientedGradientCalculator.py":42
+  /* "OrientedGradientCalculator.pyx":42
  *         output = sig_filters.savgol_filter(output, 3, 2, axis=0)
  *         output = sig_filters.savgol_filter(output, 3, 2, axis=1)
  *         self._rotated = output             # <<<<<<<<<<<<<<
@@ -2535,12 +2477,12 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_v_output) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":20
+  /* "OrientedGradientCalculator.pyx":22
  *         self._rotated = ndim.rotate(self._rotated, angle)
  * 
  *     def _operate(self):             # <<<<<<<<<<<<<<
  *         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
- * 
+ *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
  */
 
   /* function exit code */
@@ -2552,10 +2494,10 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_XDECREF(__pyx_t_14);
   __Pyx_AddTraceback("OrientedGradientCalculator.OrientedGradientCalculator._operate", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -2575,7 +2517,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":44
+/* "OrientedGradientCalculator.pyx":44
  *         self._rotated = output
  * 
  *     def calculate_image_part(self, row_start, row_end, col_start, col_end):             # <<<<<<<<<<<<<<
@@ -2691,7 +2633,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_14 = NULL;
   __Pyx_RefNannySetupContext("calculate_image_part", 0);
 
-  /* "OrientedGradientCalculator.py":45
+  /* "OrientedGradientCalculator.pyx":45
  * 
  *     def calculate_image_part(self, row_start, row_end, col_start, col_end):
  *         output = np.zeros((row_end - row_start, col_end - col_start), np.float)             # <<<<<<<<<<<<<<
@@ -2772,7 +2714,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_output = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":46
+  /* "OrientedGradientCalculator.pyx":46
  *     def calculate_image_part(self, row_start, row_end, col_start, col_end):
  *         output = np.zeros((row_end - row_start, col_end - col_start), np.float)
  *         for i in range(row_start, row_end):             # <<<<<<<<<<<<<<
@@ -2833,7 +2775,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "OrientedGradientCalculator.py":47
+    /* "OrientedGradientCalculator.pyx":47
  *         output = np.zeros((row_end - row_start, col_end - col_start), np.float)
  *         for i in range(row_start, row_end):
  *             for j in range(col_start, col_end):             # <<<<<<<<<<<<<<
@@ -2894,7 +2836,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
       __Pyx_XDECREF_SET(__pyx_v_j, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "OrientedGradientCalculator.py":48
+      /* "OrientedGradientCalculator.pyx":48
  *         for i in range(row_start, row_end):
  *             for j in range(col_start, col_end):
  *                 output[i - row_start, j - col_start] = self._calculate_single_oriented_gradient(             # <<<<<<<<<<<<<<
@@ -2904,7 +2846,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
       __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculate_single_oriented_gradi); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
 
-      /* "OrientedGradientCalculator.py":49
+      /* "OrientedGradientCalculator.pyx":49
  *             for j in range(col_start, col_end):
  *                 output[i - row_start, j - col_start] = self._calculate_single_oriented_gradient(
  *                     self._rotated[i - self.radius:i + self.radius, j - self.radius:j + self.radius])             # <<<<<<<<<<<<<<
@@ -3000,7 +2942,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "OrientedGradientCalculator.py":48
+      /* "OrientedGradientCalculator.pyx":48
  *         for i in range(row_start, row_end):
  *             for j in range(col_start, col_end):
  *                 output[i - row_start, j - col_start] = self._calculate_single_oriented_gradient(             # <<<<<<<<<<<<<<
@@ -3023,7 +2965,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "OrientedGradientCalculator.py":47
+      /* "OrientedGradientCalculator.pyx":47
  *         output = np.zeros((row_end - row_start, col_end - col_start), np.float)
  *         for i in range(row_start, row_end):
  *             for j in range(col_start, col_end):             # <<<<<<<<<<<<<<
@@ -3033,7 +2975,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "OrientedGradientCalculator.py":46
+    /* "OrientedGradientCalculator.pyx":46
  *     def calculate_image_part(self, row_start, row_end, col_start, col_end):
  *         output = np.zeros((row_end - row_start, col_end - col_start), np.float)
  *         for i in range(row_start, row_end):             # <<<<<<<<<<<<<<
@@ -3043,7 +2985,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":50
+  /* "OrientedGradientCalculator.pyx":50
  *                 output[i - row_start, j - col_start] = self._calculate_single_oriented_gradient(
  *                     self._rotated[i - self.radius:i + self.radius, j - self.radius:j + self.radius])
  *         self.parts_queue.put([output, row_start, row_end, col_start, col_end])             # <<<<<<<<<<<<<<
@@ -3120,7 +3062,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":44
+  /* "OrientedGradientCalculator.pyx":44
  *         self._rotated = output
  * 
  *     def calculate_image_part(self, row_start, row_end, col_start, col_end):             # <<<<<<<<<<<<<<
@@ -3152,7 +3094,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":52
+/* "OrientedGradientCalculator.pyx":52
  *         self.parts_queue.put([output, row_start, row_end, col_start, col_end])
  * 
  *     def calculate(self):             # <<<<<<<<<<<<<<
@@ -3184,7 +3126,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("calculate", 0);
 
-  /* "OrientedGradientCalculator.py":53
+  /* "OrientedGradientCalculator.pyx":53
  * 
  *     def calculate(self):
  *         return self.adapt(self.angle)             # <<<<<<<<<<<<<<
@@ -3246,7 +3188,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "OrientedGradientCalculator.py":52
+  /* "OrientedGradientCalculator.pyx":52
  *         self.parts_queue.put([output, row_start, row_end, col_start, col_end])
  * 
  *     def calculate(self):             # <<<<<<<<<<<<<<
@@ -3269,7 +3211,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":55
+/* "OrientedGradientCalculator.pyx":55
  *         return self.adapt(self.angle)
  * 
  *     def _calculate_single_oriented_gradient(self, img_part):             # <<<<<<<<<<<<<<
@@ -3358,7 +3300,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_13 = NULL;
   __Pyx_RefNannySetupContext("_calculate_single_oriented_gradient", 0);
 
-  /* "OrientedGradientCalculator.py":56
+  /* "OrientedGradientCalculator.pyx":56
  * 
  *     def _calculate_single_oriented_gradient(self, img_part):
  *         top, dists = np.histogram(img_part[0:self.radius, :], 256, (0, 255))             # <<<<<<<<<<<<<<
@@ -3491,7 +3433,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_dists = __pyx_t_6;
   __pyx_t_6 = 0;
 
-  /* "OrientedGradientCalculator.py":57
+  /* "OrientedGradientCalculator.pyx":57
  *     def _calculate_single_oriented_gradient(self, img_part):
  *         top, dists = np.histogram(img_part[0:self.radius, :], 256, (0, 255))
  *         bottom, dists2 = np.histogram(img_part[self.radius:, :], 256, (0, 255))             # <<<<<<<<<<<<<<
@@ -3624,7 +3566,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_dists2 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":58
+  /* "OrientedGradientCalculator.pyx":58
  *         top, dists = np.histogram(img_part[0:self.radius, :], 256, (0, 255))
  *         bottom, dists2 = np.histogram(img_part[self.radius:, :], 256, (0, 255))
  *         return 0.5 * np.sum(np.nan_to_num(np.divide(np.subtract(top, bottom) ** 2, np.add(top, bottom))))             # <<<<<<<<<<<<<<
@@ -3898,7 +3840,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "OrientedGradientCalculator.py":55
+  /* "OrientedGradientCalculator.pyx":55
  *         return self.adapt(self.angle)
  * 
  *     def _calculate_single_oriented_gradient(self, img_part):             # <<<<<<<<<<<<<<
@@ -3931,7 +3873,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":60
+/* "OrientedGradientCalculator.pyx":60
  *         return 0.5 * np.sum(np.nan_to_num(np.divide(np.subtract(top, bottom) ** 2, np.add(top, bottom))))
  * 
  *     def _extend_img(self, orig_rows, orig_cols):             # <<<<<<<<<<<<<<
@@ -4023,7 +3965,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_11 = NULL;
   __Pyx_RefNannySetupContext("_extend_img", 0);
 
-  /* "OrientedGradientCalculator.py":61
+  /* "OrientedGradientCalculator.pyx":61
  * 
  *     def _extend_img(self, orig_rows, orig_cols):
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],             # <<<<<<<<<<<<<<
@@ -4069,7 +4011,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":62
+  /* "OrientedGradientCalculator.pyx":62
  *     def _extend_img(self, orig_rows, orig_cols):
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],
  *                                    self._rotated,             # <<<<<<<<<<<<<<
@@ -4079,7 +4021,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "OrientedGradientCalculator.py":63
+  /* "OrientedGradientCalculator.pyx":63
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],
  *                                    self._rotated,
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))             # <<<<<<<<<<<<<<
@@ -4125,7 +4067,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "OrientedGradientCalculator.py":61
+  /* "OrientedGradientCalculator.pyx":61
  * 
  *     def _extend_img(self, orig_rows, orig_cols):
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],             # <<<<<<<<<<<<<<
@@ -4192,7 +4134,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":65
+  /* "OrientedGradientCalculator.pyx":65
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))
  * 
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],             # <<<<<<<<<<<<<<
@@ -4243,7 +4185,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "OrientedGradientCalculator.py":66
+  /* "OrientedGradientCalculator.pyx":66
  * 
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],
  *                                               (self._rotated.shape[0], self.radius)),             # <<<<<<<<<<<<<<
@@ -4318,7 +4260,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   }
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "OrientedGradientCalculator.py":67
+  /* "OrientedGradientCalculator.pyx":67
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],
  *                                               (self._rotated.shape[0], self.radius)),
  *                                    self._rotated,             # <<<<<<<<<<<<<<
@@ -4328,7 +4270,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "OrientedGradientCalculator.py":68
+  /* "OrientedGradientCalculator.pyx":68
  *                                               (self._rotated.shape[0], self.radius)),
  *                                    self._rotated,
  *                                    np.reshape(self._rotated[:, range(orig_cols - 1, orig_cols - self.radius - 1, -1)],             # <<<<<<<<<<<<<<
@@ -4378,7 +4320,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "OrientedGradientCalculator.py":69
+  /* "OrientedGradientCalculator.pyx":69
  *                                    self._rotated,
  *                                    np.reshape(self._rotated[:, range(orig_cols - 1, orig_cols - self.radius - 1, -1)],
  *                                               (self._rotated.shape[0], self.radius))))             # <<<<<<<<<<<<<<
@@ -4451,7 +4393,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":65
+  /* "OrientedGradientCalculator.pyx":65
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))
  * 
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],             # <<<<<<<<<<<<<<
@@ -4518,7 +4460,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":60
+  /* "OrientedGradientCalculator.pyx":60
  *         return 0.5 * np.sum(np.nan_to_num(np.divide(np.subtract(top, bottom) ** 2, np.add(top, bottom))))
  * 
  *     def _extend_img(self, orig_rows, orig_cols):             # <<<<<<<<<<<<<<
@@ -4598,7 +4540,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_col_start, __pyx_k_col_start, sizeof(__pyx_k_col_start), 0, 0, 1, 1},
   {&__pyx_n_s_cols, __pyx_k_cols, sizeof(__pyx_k_cols), 0, 0, 1, 1},
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
-  {&__pyx_n_s_cv2, __pyx_k_cv2, sizeof(__pyx_k_cv2), 0, 0, 1, 1},
   {&__pyx_n_s_dists, __pyx_k_dists, sizeof(__pyx_k_dists), 0, 0, 1, 1},
   {&__pyx_n_s_dists2, __pyx_k_dists2, sizeof(__pyx_k_dists2), 0, 0, 1, 1},
   {&__pyx_n_s_divide, __pyx_k_divide, sizeof(__pyx_k_divide), 0, 0, 1, 1},
@@ -4677,29 +4618,29 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "OrientedGradientCalculator.py":28
- *         col_bounds = [0, int(cols/2), cols]
+  /* "OrientedGradientCalculator.pyx":28
+ *         col_bounds = [0, int(cols / 2), cols]
  *         jobs = []
  *         for i in range(0, 2):             # <<<<<<<<<<<<<<
  *             for j in range(0, 2):
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
  */
   __pyx_tuple_ = PyTuple_Pack(2, __pyx_int_0, __pyx_int_2); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "OrientedGradientCalculator.py":29
+  /* "OrientedGradientCalculator.pyx":29
  *         jobs = []
  *         for i in range(0, 2):
  *             for j in range(0, 2):             # <<<<<<<<<<<<<<
- *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i+1],
- *                                                                                 col_bounds[j], col_bounds[j+1]))
+ *                 p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
+ *                                                                                     col_bounds[j], col_bounds[j + 1]))
  */
   __pyx_tuple__2 = PyTuple_Pack(2, __pyx_int_0, __pyx_int_2); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "OrientedGradientCalculator.py":56
+  /* "OrientedGradientCalculator.pyx":56
  * 
  *     def _calculate_single_oriented_gradient(self, img_part):
  *         top, dists = np.histogram(img_part[0:self.radius, :], 256, (0, 255))             # <<<<<<<<<<<<<<
@@ -4713,7 +4654,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "OrientedGradientCalculator.py":57
+  /* "OrientedGradientCalculator.pyx":57
  *     def _calculate_single_oriented_gradient(self, img_part):
  *         top, dists = np.histogram(img_part[0:self.radius, :], 256, (0, 255))
  *         bottom, dists2 = np.histogram(img_part[self.radius:, :], 256, (0, 255))             # <<<<<<<<<<<<<<
@@ -4727,7 +4668,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "OrientedGradientCalculator.py":61
+  /* "OrientedGradientCalculator.pyx":61
  * 
  *     def _extend_img(self, orig_rows, orig_cols):
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],             # <<<<<<<<<<<<<<
@@ -4738,7 +4679,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__7);
   __Pyx_GIVEREF(__pyx_slice__7);
 
-  /* "OrientedGradientCalculator.py":63
+  /* "OrientedGradientCalculator.pyx":63
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],
  *                                    self._rotated,
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))             # <<<<<<<<<<<<<<
@@ -4749,7 +4690,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__8);
   __Pyx_GIVEREF(__pyx_slice__8);
 
-  /* "OrientedGradientCalculator.py":65
+  /* "OrientedGradientCalculator.pyx":65
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))
  * 
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],             # <<<<<<<<<<<<<<
@@ -4760,7 +4701,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__9);
   __Pyx_GIVEREF(__pyx_slice__9);
 
-  /* "OrientedGradientCalculator.py":68
+  /* "OrientedGradientCalculator.pyx":68
  *                                               (self._rotated.shape[0], self.radius)),
  *                                    self._rotated,
  *                                    np.reshape(self._rotated[:, range(orig_cols - 1, orig_cols - self.radius - 1, -1)],             # <<<<<<<<<<<<<<
@@ -4770,43 +4711,43 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__10);
   __Pyx_GIVEREF(__pyx_slice__10);
 
-  /* "OrientedGradientCalculator.py":9
+  /* "OrientedGradientCalculator.pyx":11
  * 
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):             # <<<<<<<<<<<<<<
  *         RotationAdapter.__init__(self, img)
  *         self.radius = radius - 1
  */
-  __pyx_tuple__12 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_radius, __pyx_n_s_angle); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_radius, __pyx_n_s_angle); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_init, 9, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_init, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 11, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":15
+  /* "OrientedGradientCalculator.pyx":17
  *         self.parts_queue = multiprocessing.Queue()
  * 
  *     def _rotate(self, angle):             # <<<<<<<<<<<<<<
  *         self._rotated = np.copy(self.original)
  *         self._extend_img(self.original.shape[0], self.original.shape[1])
  */
-  __pyx_tuple__14 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_angle); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_angle); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_rotate_2, 15, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_rotate_2, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 17, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":20
+  /* "OrientedGradientCalculator.pyx":22
  *         self._rotated = ndim.rotate(self._rotated, angle)
  * 
  *     def _operate(self):             # <<<<<<<<<<<<<<
  *         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
- * 
+ *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
  */
-  __pyx_tuple__16 = PyTuple_Pack(13, __pyx_n_s_self, __pyx_n_s_output, __pyx_n_s_rows, __pyx_n_s_cols, __pyx_n_s_row_bounds, __pyx_n_s_col_bounds, __pyx_n_s_jobs, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_p, __pyx_n_s_k, __pyx_n_s_res, __pyx_n_s_job); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(13, __pyx_n_s_self, __pyx_n_s_output, __pyx_n_s_rows, __pyx_n_s_cols, __pyx_n_s_row_bounds, __pyx_n_s_col_bounds, __pyx_n_s_jobs, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_p, __pyx_n_s_k, __pyx_n_s_res, __pyx_n_s_job); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
-  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 13, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_operate, 20, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 13, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_operate, 22, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 22, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":44
+  /* "OrientedGradientCalculator.pyx":44
  *         self._rotated = output
  * 
  *     def calculate_image_part(self, row_start, row_end, col_start, col_end):             # <<<<<<<<<<<<<<
@@ -4818,7 +4759,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__18);
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(5, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_calculate_image_part, 44, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 44, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":52
+  /* "OrientedGradientCalculator.pyx":52
  *         self.parts_queue.put([output, row_start, row_end, col_start, col_end])
  * 
  *     def calculate(self):             # <<<<<<<<<<<<<<
@@ -4830,7 +4771,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__20);
   __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_calculate, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 52, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":55
+  /* "OrientedGradientCalculator.pyx":55
  *         return self.adapt(self.angle)
  * 
  *     def _calculate_single_oriented_gradient(self, img_part):             # <<<<<<<<<<<<<<
@@ -4842,7 +4783,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__22);
   __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_calculate_single_oriented_gradi, 55, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 55, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":60
+  /* "OrientedGradientCalculator.pyx":60
  *         return 0.5 * np.sum(np.nan_to_num(np.divide(np.subtract(top, bottom) ** 2, np.add(top, bottom))))
  * 
  *     def _extend_img(self, orig_rows, orig_cols):             # <<<<<<<<<<<<<<
@@ -4970,155 +4911,144 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "OrientedGradientCalculator.py":1
+  /* "OrientedGradientCalculator.pyx":1
+ * import multiprocessing             # <<<<<<<<<<<<<<
+ * 
+ * import numpy as np
+ */
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_multiprocessing, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_multiprocessing, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "OrientedGradientCalculator.pyx":3
+ * import multiprocessing
+ * 
  * import numpy as np             # <<<<<<<<<<<<<<
  * import scipy.signal as sig_filters
  * from scipy import ndimage as ndim
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":2
+  /* "OrientedGradientCalculator.pyx":4
+ * 
  * import numpy as np
  * import scipy.signal as sig_filters             # <<<<<<<<<<<<<<
  * from scipy import ndimage as ndim
- * import multiprocessing
+ * 
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s__11);
   __Pyx_GIVEREF(__pyx_n_s__11);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s__11);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_scipy_signal, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_scipy_signal, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sig_filters, __pyx_t_2) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sig_filters, __pyx_t_2) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":3
+  /* "OrientedGradientCalculator.pyx":5
  * import numpy as np
  * import scipy.signal as sig_filters
  * from scipy import ndimage as ndim             # <<<<<<<<<<<<<<
- * import multiprocessing
- * import cv2
+ * 
+ * from utils.RotationAdapter.RotationAdapter import RotationAdapter
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_ndimage);
   __Pyx_GIVEREF(__pyx_n_s_ndimage);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_ndimage);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_scipy, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_scipy, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_ndimage); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_ndimage); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ndim, __pyx_t_2) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ndim, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":4
- * import scipy.signal as sig_filters
+  /* "OrientedGradientCalculator.pyx":7
  * from scipy import ndimage as ndim
- * import multiprocessing             # <<<<<<<<<<<<<<
- * import cv2
- * from utils.RotationAdapter.RotationAdapter import RotationAdapter
- */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_multiprocessing, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_multiprocessing, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "OrientedGradientCalculator.py":5
- * from scipy import ndimage as ndim
- * import multiprocessing
- * import cv2             # <<<<<<<<<<<<<<
- * from utils.RotationAdapter.RotationAdapter import RotationAdapter
  * 
- */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_cv2, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 5, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cv2, __pyx_t_1) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "OrientedGradientCalculator.py":6
- * import multiprocessing
- * import cv2
  * from utils.RotationAdapter.RotationAdapter import RotationAdapter             # <<<<<<<<<<<<<<
  * 
- * class OrientedGradientCalculator(RotationAdapter):
+ * 
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_RotationAdapter);
   __Pyx_GIVEREF(__pyx_n_s_RotationAdapter);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_RotationAdapter);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_utils_RotationAdapter_RotationAd, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_utils_RotationAdapter_RotationAd, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_RotationAdapter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_RotationAdapter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_RotationAdapter, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_RotationAdapter, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":8
- * from utils.RotationAdapter.RotationAdapter import RotationAdapter
+  /* "OrientedGradientCalculator.pyx":10
+ * 
  * 
  * class OrientedGradientCalculator(RotationAdapter):             # <<<<<<<<<<<<<<
  *     def __init__(self, img, radius, angle):
  *         RotationAdapter.__init__(self, img)
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_RotationAdapter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_RotationAdapter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CalculateMetaclass(NULL, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_OrientedGradientCalculator, __pyx_n_s_OrientedGradientCalculator, (PyObject *) NULL, __pyx_n_s_OrientedGradientCalculator, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_OrientedGradientCalculator, __pyx_n_s_OrientedGradientCalculator, (PyObject *) NULL, __pyx_n_s_OrientedGradientCalculator, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "OrientedGradientCalculator.py":9
+  /* "OrientedGradientCalculator.pyx":11
  * 
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):             # <<<<<<<<<<<<<<
  *         RotationAdapter.__init__(self, img)
  *         self.radius = radius - 1
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_26OrientedGradientCalculator_26OrientedGradientCalculator_1__init__, 0, __pyx_n_s_OrientedGradientCalculator___ini, NULL, __pyx_n_s_OrientedGradientCalculator, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_26OrientedGradientCalculator_26OrientedGradientCalculator_1__init__, 0, __pyx_n_s_OrientedGradientCalculator___ini, NULL, __pyx_n_s_OrientedGradientCalculator, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":15
+  /* "OrientedGradientCalculator.pyx":17
  *         self.parts_queue = multiprocessing.Queue()
  * 
  *     def _rotate(self, angle):             # <<<<<<<<<<<<<<
  *         self._rotated = np.copy(self.original)
  *         self._extend_img(self.original.shape[0], self.original.shape[1])
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_26OrientedGradientCalculator_26OrientedGradientCalculator_3_rotate, 0, __pyx_n_s_OrientedGradientCalculator__rota, NULL, __pyx_n_s_OrientedGradientCalculator, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_26OrientedGradientCalculator_26OrientedGradientCalculator_3_rotate, 0, __pyx_n_s_OrientedGradientCalculator__rota, NULL, __pyx_n_s_OrientedGradientCalculator, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_rotate_2, __pyx_t_4) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
+  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_rotate_2, __pyx_t_4) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":20
+  /* "OrientedGradientCalculator.pyx":22
  *         self._rotated = ndim.rotate(self._rotated, angle)
  * 
  *     def _operate(self):             # <<<<<<<<<<<<<<
  *         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
- * 
+ *         rows, cols = self._rotated.shape[0], self._rotated.shape[1]
  */
-  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_26OrientedGradientCalculator_26OrientedGradientCalculator_5_operate, 0, __pyx_n_s_OrientedGradientCalculator__oper, NULL, __pyx_n_s_OrientedGradientCalculator, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_26OrientedGradientCalculator_26OrientedGradientCalculator_5_operate, 0, __pyx_n_s_OrientedGradientCalculator__oper, NULL, __pyx_n_s_OrientedGradientCalculator, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_operate, __pyx_t_4) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
+  if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_operate, __pyx_t_4) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":44
+  /* "OrientedGradientCalculator.pyx":44
  *         self._rotated = output
  * 
  *     def calculate_image_part(self, row_start, row_end, col_start, col_end):             # <<<<<<<<<<<<<<
@@ -5130,7 +5060,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_calculate_image_part, __pyx_t_4) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":52
+  /* "OrientedGradientCalculator.pyx":52
  *         self.parts_queue.put([output, row_start, row_end, col_start, col_end])
  * 
  *     def calculate(self):             # <<<<<<<<<<<<<<
@@ -5142,7 +5072,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_calculate, __pyx_t_4) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":55
+  /* "OrientedGradientCalculator.pyx":55
  *         return self.adapt(self.angle)
  * 
  *     def _calculate_single_oriented_gradient(self, img_part):             # <<<<<<<<<<<<<<
@@ -5154,7 +5084,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_calculate_single_oriented_gradi, __pyx_t_4) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":60
+  /* "OrientedGradientCalculator.pyx":60
  *         return 0.5 * np.sum(np.nan_to_num(np.divide(np.subtract(top, bottom) ** 2, np.add(top, bottom))))
  * 
  *     def _extend_img(self, orig_rows, orig_cols):             # <<<<<<<<<<<<<<
@@ -5166,25 +5096,25 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_extend_img, __pyx_t_4) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":8
- * from utils.RotationAdapter.RotationAdapter import RotationAdapter
+  /* "OrientedGradientCalculator.pyx":10
+ * 
  * 
  * class OrientedGradientCalculator(RotationAdapter):             # <<<<<<<<<<<<<<
  *     def __init__(self, img, radius, angle):
  *         RotationAdapter.__init__(self, img)
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_OrientedGradientCalculator, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_OrientedGradientCalculator, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_OrientedGradientCalculator, __pyx_t_4) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_OrientedGradientCalculator, __pyx_t_4) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":1
- * import numpy as np             # <<<<<<<<<<<<<<
- * import scipy.signal as sig_filters
- * from scipy import ndimage as ndim
+  /* "OrientedGradientCalculator.pyx":1
+ * import multiprocessing             # <<<<<<<<<<<<<<
+ * 
+ * import numpy as np
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
