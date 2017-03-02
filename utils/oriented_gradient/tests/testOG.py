@@ -48,7 +48,7 @@ class TestOG(TestCase):
         img = object_under_test.calculate()
         img = img.astype(np.uint8)
         img = cv2.applyColorMap(img, cv2.COLORMAP_JET)
-        cv2.imwrite('post_calculate.png', img)
+        cv2.imwrite('post_calculate3.png', img)
         print(time.time() - time_start)
 
     def test_calculate_oriented_gradient_vis2(self):
