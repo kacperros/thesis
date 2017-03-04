@@ -1,8 +1,9 @@
 from copy import copy
 from unittest import TestCase
+
 import cv2
 
-from utils.filters.GaussiansDifferenceFilter import GaussiansDifferenceFilter
+from utils.filters.gaussians_difference.GaussiansDifferenceFilter import GaussiansDifferenceFilter
 
 
 class TestGaussiansDifferenceFilter(TestCase):

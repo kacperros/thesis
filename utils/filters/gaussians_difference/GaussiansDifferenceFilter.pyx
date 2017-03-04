@@ -1,6 +1,7 @@
 import numpy as np
 
 from utils.filters.Filter import Filter
+from utils.filters.directed_gaussian.DirectedGaussianFilter import DirectedGaussianFilter
 
 
 class GaussiansDifferenceFilter(Filter):
@@ -15,7 +16,6 @@ class GaussiansDifferenceFilter(Filter):
         if not len(self.sigmas) == len(self.orders) == len(self.angles):
             raise ValueError("sigma, order, angle_clockwise must have the same number of elements")
         for i in range(0, len(self.sigmas)):
-            from utils.filters.directed_gaussian.DirectedGaussianFilter import DirectedGaussianFilter
             images.append(DirectedGaussianFilter(
                 np.copy(self.img), self.angles[i], self.sigmas[i], self.orders[i]).filter())
         self.img = images[0]
