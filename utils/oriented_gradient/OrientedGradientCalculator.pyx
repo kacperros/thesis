@@ -3,7 +3,7 @@ import multiprocessing
 import numpy as np
 import scipy.signal as sig_filters
 from scipy import ndimage as ndim
-
+import skimage.transform.integral as integral_img
 from utils.RotationAdapter.RotationAdapter import RotationAdapter
 
 
@@ -12,7 +12,7 @@ class OrientedGradientCalculator(RotationAdapter):
         RotationAdapter.__init__(self, img)
         self.radius = radius - 1
         self.angle = angle
-        self.parts_queue = multiprocessing.Queue()
+        self.bins = 128
 
     def _rotate(self, angle):
         self._rotated = np.copy(self.original)
@@ -21,41 +21,15 @@ class OrientedGradientCalculator(RotationAdapter):
 
     def _operate(self):
         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
-        rows, cols = self._rotated.shape[0], self._rotated.shape[1]
-        row_bounds = [0, int(rows / 2), rows]
-        col_bounds = [0, int(cols / 2), cols]
-        jobs = []
-        for i in range(0, 2):
-            for j in range(0, 2):
-                p = multiprocessing.Process(target=self.calculate_image_part, args=(row_bounds[i], row_bounds[i + 1],
-                                                                                    col_bounds[j], col_bounds[j + 1]))
-                p.start()
-                jobs.append(p)
-        for k in range(0, 4):
-            res = self.parts_queue.get()
-            output[res[1]:res[2], res[3]:res[4]] = res[0]
-        for job in jobs:
-            job.join()
-        output = np.around(output, 3)
-        output = sig_filters.savgol_filter(output, 3, 2, axis=0)
-        output = sig_filters.savgol_filter(output, 3, 2, axis=1)
+        integral_images = self._integrate_images()
+        binned_images = self._calculate_bins(integral_images)
+        output = 0.5 * np.sum(binned_images)
+        # output = sig_filters.savgol_filter(output, 3, 2, axis=0)
+        # output = sig_filters.savgol_filter(output, 3, 2, axis=1)
         self._rotated = output
-
-    def calculate_image_part(self, row_start, row_end, col_start, col_end):
-        output = np.zeros((row_end - row_start, col_end - col_start), np.float)
-        for i in range(row_start, row_end):
-            for j in range(col_start, col_end):
-                output[i - row_start, j - col_start] = self._calculate_single_oriented_gradient(
-                    self._rotated[i - self.radius:i + self.radius, j - self.radius:j + self.radius])
-        self.parts_queue.put([output, row_start, row_end, col_start, col_end])
 
     def calculate(self):
         return self.adapt(self.angle)
-
-    def _calculate_single_oriented_gradient(self, img_part):
-        top, dists = np.histogram(img_part[0:self.radius, :], 256, (0, 255))
-        bottom, dists2 = np.histogram(img_part[self.radius:, :], 256, (0, 255))
-        return 0.5 * np.sum(np.nan_to_num(np.divide(np.subtract(top, bottom) ** 2, np.add(top, bottom))))
 
     def _extend_img(self, orig_rows, orig_cols):
         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],
@@ -67,3 +41,23 @@ class OrientedGradientCalculator(RotationAdapter):
                                    self._rotated,
                                    np.reshape(self._rotated[:, range(orig_cols - 1, orig_cols - self.radius - 1, -1)],
                                               (self._rotated.shape[0], self.radius))))
+
+    def _integrate_images(self):
+        intervals = np.array([i * (255 / self.bins) for i in range(0, self.bins + 1)])
+        images = np.array([np.copy(self._rotated).astype(np.float) for i in range(0, self.bins)])
+        for i in range(0, self.bins):
+            images[i][(intervals[i] > images[i]) | (intervals[i + 1] < images[i])] = 0
+            images[i][(intervals[i] < images[i]) & (images[i] < intervals[i + 1])] = 1
+            images[i] = integral_img.integral_image(images[i])
+        return images
+
+    def _calculate_bins(self, integral_images):
+        for image in integral_images:
+            for i in range(self.radius, image.shape[0] - self.radius):
+                for j in range(self.radius, image.shape[1] - self.radius):
+                    image[i, j] = integral_img.integrate(image, (i - self.radius, j - self.radius),
+                                                         (i + self.radius - 1, j + 1)) \
+                                  - integral_img.integrate(image, (i - self.radius, j),
+                                                           (i + self.radius - 1, j + self.radius - 1))
+
+        return integral_images
