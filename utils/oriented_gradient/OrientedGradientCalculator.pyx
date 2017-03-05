@@ -1,5 +1,5 @@
 import multiprocessing
-
+import cv2
 import numpy as np
 import scipy.signal as sig_filters
 from scipy import ndimage as ndim
@@ -12,7 +12,7 @@ class OrientedGradientCalculator(RotationAdapter):
         RotationAdapter.__init__(self, img)
         self.radius = radius - 1
         self.angle = angle
-        self.bins = 128
+        self.bins = 96
 
     def _rotate(self, angle):
         self._rotated = np.copy(self.original)
@@ -20,12 +20,12 @@ class OrientedGradientCalculator(RotationAdapter):
         self._rotated = ndim.rotate(self._rotated, angle)
 
     def _operate(self):
-        output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
         integral_images = self._integrate_images()
         binned_images = self._calculate_bins(integral_images)
-        output = 0.5 * np.sum(binned_images)
-        # output = sig_filters.savgol_filter(output, 3, 2, axis=0)
-        # output = sig_filters.savgol_filter(output, 3, 2, axis=1)
+        binned_images = np.nan_to_num(binned_images)
+        output = 0.5 * np.sum(binned_images, axis=0)
+        output = sig_filters.savgol_filter(output, 5, 2, axis=0)
+        output = sig_filters.savgol_filter(output, 5, 2, axis=1)
         self._rotated = output
 
     def calculate(self):
@@ -46,18 +46,24 @@ class OrientedGradientCalculator(RotationAdapter):
         intervals = np.array([i * (255 / self.bins) for i in range(0, self.bins + 1)])
         images = np.array([np.copy(self._rotated).astype(np.float) for i in range(0, self.bins)])
         for i in range(0, self.bins):
-            images[i][(intervals[i] > images[i]) | (intervals[i + 1] < images[i])] = 0
-            images[i][(intervals[i] < images[i]) & (images[i] < intervals[i + 1])] = 1
+            mask = (intervals[i] <= images[i]) & (images[i] <= intervals[i + 1])
+            images[i][np.logical_not(mask)] = 0
+            images[i][mask] = 1
             images[i] = integral_img.integral_image(images[i])
         return images
 
     def _calculate_bins(self, integral_images):
+        k = 0
+        r = self.radius
+        copies = np.copy(integral_images)
         for image in integral_images:
-            for i in range(self.radius, image.shape[0] - self.radius):
-                for j in range(self.radius, image.shape[1] - self.radius):
-                    image[i, j] = integral_img.integrate(image, (i - self.radius, j - self.radius),
-                                                         (i + self.radius - 1, j + 1)) \
-                                  - integral_img.integrate(image, (i - self.radius, j),
-                                                           (i + self.radius - 1, j + self.radius - 1))
-
-        return integral_images
+            for i in range(r, image.shape[0] - r):
+                for j in range(r, image.shape[1] - r):
+                    top_bin = image[i - r, j - r] + image[i - 1, j + r - 1] \
+                              - image[i - 1, j - r] - image[i - r, j + r - 1]
+                    bottom_bin = image[i, j - r] + image[i + r - 1, j + r - 1] \
+                                 - image[i + r - 1, j - r] - image[i, j + r - 1]
+                    bins = top_bin + bottom_bin if top_bin + bottom_bin != 0 else 1
+                    copies[k, i, j] = (top_bin - bottom_bin) ** 2 / bins
+            k += 1
+        return copies

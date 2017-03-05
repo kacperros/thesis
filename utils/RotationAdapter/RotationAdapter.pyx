@@ -1,6 +1,6 @@
 import numpy as np
 from scipy import ndimage as ndim
-
+import cv2
 
 class RotationAdapter:
     def __init__(self, image):

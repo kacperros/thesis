@@ -927,6 +927,7 @@ int __pyx_module_is_main_RotationAdapter = 0;
 
 /* Implementation of 'RotationAdapter' */
 static const char __pyx_k_np[] = "np";
+static const char __pyx_k_cv2[] = "cv2";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_ceil[] = "ceil";
 static const char __pyx_k_copy[] = "copy";
@@ -976,6 +977,7 @@ static PyObject *__pyx_n_s_adapt;
 static PyObject *__pyx_n_s_angle;
 static PyObject *__pyx_n_s_ceil;
 static PyObject *__pyx_n_s_copy;
+static PyObject *__pyx_n_s_cv2;
 static PyObject *__pyx_n_s_doc;
 static PyObject *__pyx_kp_s_home_kacper_Projects_INZ_Clothe;
 static PyObject *__pyx_n_s_image;
@@ -2225,6 +2227,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_angle, __pyx_k_angle, sizeof(__pyx_k_angle), 0, 0, 1, 1},
   {&__pyx_n_s_ceil, __pyx_k_ceil, sizeof(__pyx_k_ceil), 0, 0, 1, 1},
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
+  {&__pyx_n_s_cv2, __pyx_k_cv2, sizeof(__pyx_k_cv2), 0, 0, 1, 1},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
   {&__pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_k_home_kacper_Projects_INZ_Clothe, sizeof(__pyx_k_home_kacper_Projects_INZ_Clothe), 0, 0, 1, 0},
   {&__pyx_n_s_image, __pyx_k_image, sizeof(__pyx_k_image), 0, 0, 1, 1},
@@ -2436,7 +2439,7 @@ PyMODINIT_FUNC PyInit_RotationAdapter(void)
   /* "RotationAdapter.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * from scipy import ndimage as ndim
- * 
+ * import cv2
  */
   __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -2446,7 +2449,7 @@ PyMODINIT_FUNC PyInit_RotationAdapter(void)
   /* "RotationAdapter.pyx":2
  * import numpy as np
  * from scipy import ndimage as ndim             # <<<<<<<<<<<<<<
- * 
+ * import cv2
  * 
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 2, __pyx_L1_error)
@@ -2463,8 +2466,20 @@ PyMODINIT_FUNC PyInit_RotationAdapter(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "RotationAdapter.pyx":5
+  /* "RotationAdapter.pyx":3
+ * import numpy as np
+ * from scipy import ndimage as ndim
+ * import cv2             # <<<<<<<<<<<<<<
  * 
+ * class RotationAdapter:
+ */
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_cv2, 0, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cv2, __pyx_t_2) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "RotationAdapter.pyx":5
+ * import cv2
  * 
  * class RotationAdapter:             # <<<<<<<<<<<<<<
  *     def __init__(self, image):
@@ -2534,7 +2549,7 @@ PyMODINIT_FUNC PyInit_RotationAdapter(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "RotationAdapter.pyx":5
- * 
+ * import cv2
  * 
  * class RotationAdapter:             # <<<<<<<<<<<<<<
  *     def __init__(self, image):
@@ -2549,7 +2564,7 @@ PyMODINIT_FUNC PyInit_RotationAdapter(void)
   /* "RotationAdapter.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * from scipy import ndimage as ndim
- * 
+ * import cv2
  */
   __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
