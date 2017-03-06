@@ -19,9 +19,11 @@ class OrientedGradientCalculator(RotationAdapter):
         self._rotated = np.copy(self.original)
         start_time = time.time()
         self._extend_img(self.original.shape[0], self.original.shape[1])
+        self.mask = np.full(self._rotated.shape, True)
         print('Extending took: ', time.time() - start_time)
         start_time = time.time()
         self._rotated = ndim.rotate(self._rotated, angle)
+        self.mask = ndim.rotate(self.mask, angle)
         print('Rotation took: ', time.time() - start_time)
 
     def _operate(self):
@@ -78,6 +80,8 @@ class OrientedGradientCalculator(RotationAdapter):
             range(self.radius, image.shape[0] - self.radius)]
 
     def _calc_gradient_at(self, image, i, j, r):
+        if not self.mask[i,j]:
+            return 0
         top_bin = image[i - r, j - r] + image[i - 1, j + r - 1] \
                   - image[i - 1, j - r] - image[i - r, j + r - 1]
         bottom_bin = image[i, j - r] + image[i + r - 1, j + r - 1] \
