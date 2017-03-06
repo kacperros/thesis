@@ -17,7 +17,9 @@ class OrientedGradientCalculator(RotationAdapter):
     def _rotate(self, angle):
         self._rotated = np.copy(self.original)
         self._extend_img(self.original.shape[0], self.original.shape[1])
+        self.mask = np.full(self._rotated.shape, True)
         self._rotated = ndim.rotate(self._rotated, angle)
+        self.mask = ndim.rotate(self.mask, angle)
 
     def _operate(self):
         output = np.zeros((self._rotated.shape[0], self._rotated.shape[1]))
@@ -46,13 +48,15 @@ class OrientedGradientCalculator(RotationAdapter):
         for i in range(row_start, row_end):
             for j in range(col_start, col_end):
                 output[i - row_start, j - col_start] = self._calculate_single_oriented_gradient(
-                    self._rotated[i - self.radius:i + self.radius, j - self.radius:j + self.radius])
+                    self._rotated[i - self.radius:i + self.radius, j - self.radius:j + self.radius], i, j)
         self.parts_queue.put([output, row_start, row_end, col_start, col_end])
 
     def calculate(self):
         return self.adapt(self.angle)
 
-    def _calculate_single_oriented_gradient(self, img_part):
+    def _calculate_single_oriented_gradient(self, img_part, row, col):
+        if not self.mask[row, col]:
+            return 0
         top, dists = np.histogram(img_part[0:self.radius, :], 256, (0, 255))
         bottom, dists2 = np.histogram(img_part[self.radius:, :], 256, (0, 255))
         return 0.5 * np.sum(np.nan_to_num(np.divide(np.subtract(top, bottom) ** 2, np.add(top, bottom))))

@@ -3,5 +3,6 @@ from distutils.core import setup
 from Cython.Build import cythonize
 
 setup(
-    ext_modules=cythonize("OrientedGradientCalculator.pyx"), requires=['Cython', 'cv2', 'scipy', 'multiprocessing']
+    ext_modules=cythonize("OrientedGradientCalculator.pyx"),
+    requires=['Cython', 'cv2', 'scipy', 'multiprocessing', 'numpy']
 )

@@ -44,7 +44,7 @@ class TestOG(TestCase):
         img2[:, :, 0] = img[:, :]
         img2[:, :, 1] = img[:, :]
         cv2.imwrite('orig_lab.png', img2)
-        object_under_test = OrientedGradientCalculator(img,12, 90)
+        object_under_test = OrientedGradientCalculator(img,10, 45)
         img = object_under_test.calculate()
         img = img.astype(np.uint8)
         img = cv2.applyColorMap(img, cv2.COLORMAP_JET)
