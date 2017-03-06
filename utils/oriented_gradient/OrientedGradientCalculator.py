@@ -2,6 +2,7 @@ import multiprocessing
 import cv2
 import numpy as np
 import scipy.signal as sig_filters
+import time
 from scipy import ndimage as ndim
 import skimage.transform.integral as integral_img
 from utils.RotationAdapter.RotationAdapter import RotationAdapter
@@ -16,16 +17,27 @@ class OrientedGradientCalculator(RotationAdapter):
 
     def _rotate(self, angle):
         self._rotated = np.copy(self.original)
+        start_time = time.time()
         self._extend_img(self.original.shape[0], self.original.shape[1])
+        print('Extending took: ', time.time() - start_time)
+        start_time = time.time()
         self._rotated = ndim.rotate(self._rotated, angle)
+        print('Rotation took: ', time.time() - start_time)
 
     def _operate(self):
+        start_time = time.time()
         integral_images = self._integrate_images()
+        print('Integrals took:', time.time() - start_time)
+        start_time = time.time()
         binned_images = self._calculate_bins(integral_images)
-        binned_images = np.nan_to_num(binned_images)
+        print('Binning took:', time.time() - start_time)
+        start_time = time.time()
         output = 0.5 * np.sum(binned_images, axis=0)
+        print('Summing took:', time.time() - start_time)
+        start_time = time.time()
         output = sig_filters.savgol_filter(output, 5, 2, axis=0)
         output = sig_filters.savgol_filter(output, 5, 2, axis=1)
+        print('Sav-Gol took:', time.time() - start_time)
         self._rotated = output
 
     def calculate(self):
@@ -44,13 +56,16 @@ class OrientedGradientCalculator(RotationAdapter):
 
     def _integrate_images(self):
         intervals = np.array([i * (255 / self.bins) for i in range(0, self.bins + 1)])
-        images = np.array([np.copy(self._rotated).astype(np.float) for i in range(0, self.bins)])
-        for i in range(0, self.bins):
-            mask = (intervals[i] <= images[i]) & (images[i] <= intervals[i + 1])
-            images[i][np.logical_not(mask)] = 0
-            images[i][mask] = 1
-            images[i] = integral_img.integral_image(images[i])
+        images = np.array(
+            [self.__mask_img(np.copy(self._rotated).astype(np.float), intervals[i], intervals[i + 1]) for i in
+             range(0, self.bins)])
         return images
+
+    def __mask_img(self, img, bot, top):
+        mask = (bot <= img) & (img <= top)
+        img[np.logical_not(mask)] = 0
+        img[mask] = 1
+        return integral_img.integral_image(img)
 
     def _calculate_bins(self, integral_images):
         k = 0
@@ -63,7 +78,7 @@ class OrientedGradientCalculator(RotationAdapter):
                               - image[i - 1, j - r] - image[i - r, j + r - 1]
                     bottom_bin = image[i, j - r] + image[i + r - 1, j + r - 1] \
                                  - image[i + r - 1, j - r] - image[i, j + r - 1]
-                    bins = top_bin + bottom_bin if top_bin + bottom_bin != 0 else 1
-                    copies[k, i, j] = (top_bin - bottom_bin) ** 2 / bins
+                    copies[k, i, j] = (top_bin - bottom_bin) ** 2 / (
+                    top_bin + bottom_bin) if top_bin != 0 or bottom_bin != 0 else 0
             k += 1
         return copies
