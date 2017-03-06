@@ -68,17 +68,19 @@ class OrientedGradientCalculator(RotationAdapter):
         return integral_img.integral_image(img)
 
     def _calculate_bins(self, integral_images):
-        k = 0
-        r = self.radius
-        copies = np.copy(integral_images)
-        for image in integral_images:
-            for i in range(r, image.shape[0] - r):
-                for j in range(r, image.shape[1] - r):
-                    top_bin = image[i - r, j - r] + image[i - 1, j + r - 1] \
-                              - image[i - 1, j - r] - image[i - r, j + r - 1]
-                    bottom_bin = image[i, j - r] + image[i + r - 1, j + r - 1] \
-                                 - image[i + r - 1, j - r] - image[i, j + r - 1]
-                    copies[k, i, j] = (top_bin - bottom_bin) ** 2 / (
-                    top_bin + bottom_bin) if top_bin != 0 or bottom_bin != 0 else 0
-            k += 1
-        return copies
+        with multiprocessing.Pool(processes=4) as pool:
+            return pool.map(self._calculate_bin, integral_images)
+
+    def _calculate_bin(self, image):
+        return [
+            [self._calc_gradient_at(image, i, j, self.radius) for j in range(self.radius, image.shape[1] - self.radius)]
+            for i in
+            range(self.radius, image.shape[0] - self.radius)]
+
+    def _calc_gradient_at(self, image, i, j, r):
+        top_bin = image[i - r, j - r] + image[i - 1, j + r - 1] \
+                  - image[i - 1, j - r] - image[i - r, j + r - 1]
+        bottom_bin = image[i, j - r] + image[i + r - 1, j + r - 1] \
+                     - image[i + r - 1, j - r] - image[i, j + r - 1]
+        return (top_bin - bottom_bin) ** 2 / (
+            top_bin + bottom_bin) if top_bin != 0 or bottom_bin != 0 else 0
