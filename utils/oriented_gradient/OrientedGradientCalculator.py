@@ -59,7 +59,9 @@ class OrientedGradientCalculator(RotationAdapter):
             return 0
         top, dists = np.histogram(img_part[0:self.radius, :], 256, (0, 255))
         bottom, dists2 = np.histogram(img_part[self.radius:, :], 256, (0, 255))
-        return 0.5 * np.sum(np.nan_to_num(np.divide(np.subtract(top, bottom) ** 2, np.add(top, bottom))))
+        divisor = np.add(top, bottom)
+        divisor[divisor == 0] = 1
+        return 0.5 * np.sum(np.divide(np.subtract(top, bottom) ** 2, divisor))
 
     def _extend_img(self, orig_rows, orig_cols):
         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],
