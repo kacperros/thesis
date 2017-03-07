@@ -44,11 +44,11 @@ class TestOG(TestCase):
         img2[:, :, 0] = img[:, :]
         img2[:, :, 1] = img[:, :]
         cv2.imwrite('orig_lab.png', img2)
-        object_under_test = OrientedGradientCalculator(img,10, 0)
+        object_under_test = OrientedGradientCalculator(img,11, 45)
         img = object_under_test.calculate()
         img = img.astype(np.uint8)
         img = cv2.applyColorMap(img, cv2.COLORMAP_JET)
-        cv2.imwrite('post_calculate3.png', img)
+        cv2.imwrite('post_calculate11.png', img)
         print(time.time() - time_start)
 
     def test_calculate_oriented_gradient_vis2(self):

@@ -1,8 +1,10 @@
 from copy import copy
+from time import time
 from unittest import TestCase
+
 import cv2
 
-from utils.filters.GaussiansDifferenceFilter import GaussiansDifferenceFilter
+from utils.filters.GaussiansDifference.GaussiansDifferenceFilter import GaussiansDifferenceFilter
 
 
 class TestGaussiansDifferenceFilter(TestCase):
@@ -14,5 +16,7 @@ class TestGaussiansDifferenceFilter(TestCase):
 
     def test_test1(self):
         object_under_test = GaussiansDifferenceFilter(self.img, [2, 1], [(0, 0), (0, 0)], (0, 0))
+        start_t = time()
         filtered = object_under_test.filter()
+        print(time() - start_t)
         cv2.imwrite('DoG_2_1.png', filtered)

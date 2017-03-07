@@ -631,7 +631,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "OrientedGradientCalculator.py",
+  "OrientedGradientCalculator.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -1112,7 +1112,7 @@ static const char __pyx_k_RotationAdapter[] = "RotationAdapter";
 static const char __pyx_k_multiprocessing_pool[] = "multiprocessing.pool";
 static const char __pyx_k_OrientedGradientCalculator[] = "OrientedGradientCalculator";
 static const char __pyx_k_calculate_single_oriented_gradi[] = "_calculate_single_oriented_gradient2";
-static const char __pyx_k_home_kacper_Projects_INZ_Clothe[] = "/home/kacper/Projects/INZ/ClothesWare/utils/oriented_gradient/OrientedGradientCalculator.py";
+static const char __pyx_k_home_kacper_Projects_INZ_Clothe[] = "/home/kacper/Projects/INZ/ClothesWare/utils/oriented_gradient/OrientedGradientCalculator.pyx";
 static const char __pyx_k_OrientedGradientCalculator___ini[] = "OrientedGradientCalculator.__init__";
 static const char __pyx_k_OrientedGradientCalculator__calc[] = "OrientedGradientCalculator._calculate_single_oriented_gradient2";
 static const char __pyx_k_OrientedGradientCalculator__exte[] = "OrientedGradientCalculator._extend_img";
@@ -1235,7 +1235,7 @@ static PyObject *__pyx_codeobj__17;
 static PyObject *__pyx_codeobj__19;
 static PyObject *__pyx_codeobj__21;
 
-/* "OrientedGradientCalculator.py":11
+/* "OrientedGradientCalculator.pyx":11
  * 
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):             # <<<<<<<<<<<<<<
@@ -1330,7 +1330,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "OrientedGradientCalculator.py":12
+  /* "OrientedGradientCalculator.pyx":12
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):
  *         RotationAdapter.__init__(self, img)             # <<<<<<<<<<<<<<
@@ -1389,7 +1389,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":13
+  /* "OrientedGradientCalculator.pyx":13
  *     def __init__(self, img, radius, angle):
  *         RotationAdapter.__init__(self, img)
  *         self.radius = radius - 1             # <<<<<<<<<<<<<<
@@ -1401,7 +1401,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_radius, __pyx_t_1) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":14
+  /* "OrientedGradientCalculator.pyx":14
  *         RotationAdapter.__init__(self, img)
  *         self.radius = radius - 1
  *         self.angle = angle             # <<<<<<<<<<<<<<
@@ -1410,7 +1410,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_angle, __pyx_v_angle) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":15
+  /* "OrientedGradientCalculator.pyx":15
  *         self.radius = radius - 1
  *         self.angle = angle
  *         self.hist_bins = 256             # <<<<<<<<<<<<<<
@@ -1419,7 +1419,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_hist_bins, __pyx_int_256) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":11
+  /* "OrientedGradientCalculator.pyx":11
  * 
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):             # <<<<<<<<<<<<<<
@@ -1443,7 +1443,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":17
+/* "OrientedGradientCalculator.pyx":17
  *         self.hist_bins = 256
  * 
  *     def _rotate(self, angle):             # <<<<<<<<<<<<<<
@@ -1522,7 +1522,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("_rotate", 0);
 
-  /* "OrientedGradientCalculator.py":18
+  /* "OrientedGradientCalculator.pyx":18
  * 
  *     def _rotate(self, angle):
  *         self._rotated = np.copy(self.original)             # <<<<<<<<<<<<<<
@@ -1585,7 +1585,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":19
+  /* "OrientedGradientCalculator.pyx":19
  *     def _rotate(self, angle):
  *         self._rotated = np.copy(self.original)
  *         self._extend_img(self.original.shape[0], self.original.shape[1])             # <<<<<<<<<<<<<<
@@ -1661,7 +1661,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":20
+  /* "OrientedGradientCalculator.pyx":20
  *         self._rotated = np.copy(self.original)
  *         self._extend_img(self.original.shape[0], self.original.shape[1])
  *         self.mask = np.full(self._rotated.shape, True)             # <<<<<<<<<<<<<<
@@ -1728,7 +1728,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_mask, __pyx_t_1) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":21
+  /* "OrientedGradientCalculator.pyx":21
  *         self._extend_img(self.original.shape[0], self.original.shape[1])
  *         self.mask = np.full(self._rotated.shape, True)
  *         self._rotated = ndim.rotate(self._rotated, angle)             # <<<<<<<<<<<<<<
@@ -1792,7 +1792,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":22
+  /* "OrientedGradientCalculator.pyx":22
  *         self.mask = np.full(self._rotated.shape, True)
  *         self._rotated = ndim.rotate(self._rotated, angle)
  *         self.mask = ndim.rotate(self.mask, angle)             # <<<<<<<<<<<<<<
@@ -1856,7 +1856,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_mask, __pyx_t_1) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":17
+  /* "OrientedGradientCalculator.pyx":17
  *         self.hist_bins = 256
  * 
  *     def _rotate(self, angle):             # <<<<<<<<<<<<<<
@@ -1882,7 +1882,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":24
+/* "OrientedGradientCalculator.pyx":24
  *         self.mask = ndim.rotate(self.mask, angle)
  * 
  *     def _operate(self):             # <<<<<<<<<<<<<<
@@ -1933,7 +1933,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   int __pyx_t_18;
   __Pyx_RefNannySetupContext("_operate", 0);
 
-  /* "OrientedGradientCalculator.py":25
+  /* "OrientedGradientCalculator.pyx":25
  * 
  *     def _operate(self):
  *         out2 = np.array([(j, i) for j in range(0, self._rotated.shape[0]) for i in range(0, self._rotated.shape[1])])             # <<<<<<<<<<<<<<
@@ -2132,7 +2132,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_out2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":26
+  /* "OrientedGradientCalculator.pyx":26
  *     def _operate(self):
  *         out2 = np.array([(j, i) for j in range(0, self._rotated.shape[0]) for i in range(0, self._rotated.shape[1])])
  *         with Pool(8) as p:             # <<<<<<<<<<<<<<
@@ -2182,7 +2182,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
           __pyx_v_p = __pyx_t_8;
           __pyx_t_8 = 0;
 
-          /* "OrientedGradientCalculator.py":27
+          /* "OrientedGradientCalculator.pyx":27
  *         out2 = np.array([(j, i) for j in range(0, self._rotated.shape[0]) for i in range(0, self._rotated.shape[1])])
  *         with Pool(8) as p:
  *             result = p.map(self._calculate_single_oriented_gradient2, out2)             # <<<<<<<<<<<<<<
@@ -2243,7 +2243,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
           __pyx_v_result = __pyx_t_8;
           __pyx_t_8 = 0;
 
-          /* "OrientedGradientCalculator.py":28
+          /* "OrientedGradientCalculator.pyx":28
  *         with Pool(8) as p:
  *             result = p.map(self._calculate_single_oriented_gradient2, out2)
  *             output = np.reshape(result, self._rotated.shape)             # <<<<<<<<<<<<<<
@@ -2310,7 +2310,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
           __pyx_v_output = __pyx_t_8;
           __pyx_t_8 = 0;
 
-          /* "OrientedGradientCalculator.py":29
+          /* "OrientedGradientCalculator.pyx":29
  *             result = p.map(self._calculate_single_oriented_gradient2, out2)
  *             output = np.reshape(result, self._rotated.shape)
  *             output = np.around(output, 3)             # <<<<<<<<<<<<<<
@@ -2370,7 +2370,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
           __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_8);
           __pyx_t_8 = 0;
 
-          /* "OrientedGradientCalculator.py":30
+          /* "OrientedGradientCalculator.pyx":30
  *             output = np.reshape(result, self._rotated.shape)
  *             output = np.around(output, 3)
  *             output = sig_filters.savgol_filter(output, 3, 2, axis=0)             # <<<<<<<<<<<<<<
@@ -2404,7 +2404,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
           __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_5);
           __pyx_t_5 = 0;
 
-          /* "OrientedGradientCalculator.py":31
+          /* "OrientedGradientCalculator.pyx":31
  *             output = np.around(output, 3)
  *             output = sig_filters.savgol_filter(output, 3, 2, axis=0)
  *             output = sig_filters.savgol_filter(output, 3, 2, axis=1)             # <<<<<<<<<<<<<<
@@ -2438,7 +2438,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
           __Pyx_DECREF_SET(__pyx_v_output, __pyx_t_2);
           __pyx_t_2 = 0;
 
-          /* "OrientedGradientCalculator.py":32
+          /* "OrientedGradientCalculator.pyx":32
  *             output = sig_filters.savgol_filter(output, 3, 2, axis=0)
  *             output = sig_filters.savgol_filter(output, 3, 2, axis=1)
  *             self._rotated = output             # <<<<<<<<<<<<<<
@@ -2447,7 +2447,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
  */
           if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_v_output) < 0) __PYX_ERR(0, 32, __pyx_L11_error)
 
-          /* "OrientedGradientCalculator.py":26
+          /* "OrientedGradientCalculator.pyx":26
  *     def _operate(self):
  *         out2 = np.array([(j, i) for j in range(0, self._rotated.shape[0]) for i in range(0, self._rotated.shape[1])])
  *         with Pool(8) as p:             # <<<<<<<<<<<<<<
@@ -2533,7 +2533,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     __pyx_L22:;
   }
 
-  /* "OrientedGradientCalculator.py":24
+  /* "OrientedGradientCalculator.pyx":24
  *         self.mask = ndim.rotate(self.mask, angle)
  * 
  *     def _operate(self):             # <<<<<<<<<<<<<<
@@ -2565,7 +2565,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":34
+/* "OrientedGradientCalculator.pyx":34
  *             self._rotated = output
  * 
  *     def calculate(self):             # <<<<<<<<<<<<<<
@@ -2597,7 +2597,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("calculate", 0);
 
-  /* "OrientedGradientCalculator.py":35
+  /* "OrientedGradientCalculator.pyx":35
  * 
  *     def calculate(self):
  *         return self.adapt(self.angle)             # <<<<<<<<<<<<<<
@@ -2659,7 +2659,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "OrientedGradientCalculator.py":34
+  /* "OrientedGradientCalculator.pyx":34
  *             self._rotated = output
  * 
  *     def calculate(self):             # <<<<<<<<<<<<<<
@@ -2682,7 +2682,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":37
+/* "OrientedGradientCalculator.pyx":37
  *         return self.adapt(self.angle)
  * 
  *     def _calculate_single_oriented_gradient2(self, args):             # <<<<<<<<<<<<<<
@@ -2773,7 +2773,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_12 = NULL;
   __Pyx_RefNannySetupContext("_calculate_single_oriented_gradient2", 0);
 
-  /* "OrientedGradientCalculator.py":38
+  /* "OrientedGradientCalculator.pyx":38
  * 
  *     def _calculate_single_oriented_gradient2(self, args):
  *         row, col = args             # <<<<<<<<<<<<<<
@@ -2833,7 +2833,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_col = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":39
+  /* "OrientedGradientCalculator.pyx":39
  *     def _calculate_single_oriented_gradient2(self, args):
  *         row, col = args
  *         if not self.mask[row, col]:             # <<<<<<<<<<<<<<
@@ -2859,7 +2859,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_6 = ((!__pyx_t_5) != 0);
   if (__pyx_t_6) {
 
-    /* "OrientedGradientCalculator.py":40
+    /* "OrientedGradientCalculator.pyx":40
  *         row, col = args
  *         if not self.mask[row, col]:
  *             return 0             # <<<<<<<<<<<<<<
@@ -2871,7 +2871,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     __pyx_r = __pyx_int_0;
     goto __pyx_L0;
 
-    /* "OrientedGradientCalculator.py":39
+    /* "OrientedGradientCalculator.pyx":39
  *     def _calculate_single_oriented_gradient2(self, args):
  *         row, col = args
  *         if not self.mask[row, col]:             # <<<<<<<<<<<<<<
@@ -2880,7 +2880,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
  */
   }
 
-  /* "OrientedGradientCalculator.py":41
+  /* "OrientedGradientCalculator.pyx":41
  *         if not self.mask[row, col]:
  *             return 0
  *         top, dists = np.histogram(self._rotated[row - self.radius:row, col - self.radius:col + self.radius], 256,             # <<<<<<<<<<<<<<
@@ -2929,7 +2929,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-  /* "OrientedGradientCalculator.py":42
+  /* "OrientedGradientCalculator.pyx":42
  *             return 0
  *         top, dists = np.histogram(self._rotated[row - self.radius:row, col - self.radius:col + self.radius], 256,
  *                                   (0, 255))             # <<<<<<<<<<<<<<
@@ -3037,7 +3037,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     __pyx_L7_unpacking_done:;
   }
 
-  /* "OrientedGradientCalculator.py":41
+  /* "OrientedGradientCalculator.pyx":41
  *         if not self.mask[row, col]:
  *             return 0
  *         top, dists = np.histogram(self._rotated[row - self.radius:row, col - self.radius:col + self.radius], 256,             # <<<<<<<<<<<<<<
@@ -3049,7 +3049,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_dists = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":43
+  /* "OrientedGradientCalculator.pyx":43
  *         top, dists = np.histogram(self._rotated[row - self.radius:row, col - self.radius:col + self.radius], 256,
  *                                   (0, 255))
  *         bottom, dists2 = np.histogram(self._rotated[row:row + self.radius, col - self.radius:col + self.radius], 256,             # <<<<<<<<<<<<<<
@@ -3098,7 +3098,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "OrientedGradientCalculator.py":44
+  /* "OrientedGradientCalculator.pyx":44
  *                                   (0, 255))
  *         bottom, dists2 = np.histogram(self._rotated[row:row + self.radius, col - self.radius:col + self.radius], 256,
  *                                       (0, 255))             # <<<<<<<<<<<<<<
@@ -3206,7 +3206,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
     __pyx_L9_unpacking_done:;
   }
 
-  /* "OrientedGradientCalculator.py":43
+  /* "OrientedGradientCalculator.pyx":43
  *         top, dists = np.histogram(self._rotated[row - self.radius:row, col - self.radius:col + self.radius], 256,
  *                                   (0, 255))
  *         bottom, dists2 = np.histogram(self._rotated[row:row + self.radius, col - self.radius:col + self.radius], 256,             # <<<<<<<<<<<<<<
@@ -3218,7 +3218,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_dists2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":45
+  /* "OrientedGradientCalculator.pyx":45
  *         bottom, dists2 = np.histogram(self._rotated[row:row + self.radius, col - self.radius:col + self.radius], 256,
  *                                       (0, 255))
  *         divisor = np.add(top, bottom)             # <<<<<<<<<<<<<<
@@ -3278,7 +3278,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_v_divisor = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "OrientedGradientCalculator.py":46
+  /* "OrientedGradientCalculator.pyx":46
  *                                       (0, 255))
  *         divisor = np.add(top, bottom)
  *         divisor[divisor == 0] = 1             # <<<<<<<<<<<<<<
@@ -3290,7 +3290,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (unlikely(PyObject_SetItem(__pyx_v_divisor, __pyx_t_3, __pyx_int_1) < 0)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "OrientedGradientCalculator.py":47
+  /* "OrientedGradientCalculator.pyx":47
  *         divisor = np.add(top, bottom)
  *         divisor[divisor == 0] = 1
  *         return 0.5 * np.sum(np.divide(np.subtract(top, bottom) ** 2, divisor))             # <<<<<<<<<<<<<<
@@ -3461,7 +3461,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_10 = 0;
   goto __pyx_L0;
 
-  /* "OrientedGradientCalculator.py":37
+  /* "OrientedGradientCalculator.pyx":37
  *         return self.adapt(self.angle)
  * 
  *     def _calculate_single_oriented_gradient2(self, args):             # <<<<<<<<<<<<<<
@@ -3494,7 +3494,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   return __pyx_r;
 }
 
-/* "OrientedGradientCalculator.py":49
+/* "OrientedGradientCalculator.pyx":49
  *         return 0.5 * np.sum(np.divide(np.subtract(top, bottom) ** 2, divisor))
  * 
  *     def _extend_img(self, orig_rows, orig_cols):             # <<<<<<<<<<<<<<
@@ -3586,7 +3586,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   PyObject *__pyx_t_11 = NULL;
   __Pyx_RefNannySetupContext("_extend_img", 0);
 
-  /* "OrientedGradientCalculator.py":50
+  /* "OrientedGradientCalculator.pyx":50
  * 
  *     def _extend_img(self, orig_rows, orig_cols):
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],             # <<<<<<<<<<<<<<
@@ -3632,7 +3632,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":51
+  /* "OrientedGradientCalculator.pyx":51
  *     def _extend_img(self, orig_rows, orig_cols):
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],
  *                                    self._rotated,             # <<<<<<<<<<<<<<
@@ -3642,7 +3642,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "OrientedGradientCalculator.py":52
+  /* "OrientedGradientCalculator.pyx":52
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],
  *                                    self._rotated,
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))             # <<<<<<<<<<<<<<
@@ -3688,7 +3688,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "OrientedGradientCalculator.py":50
+  /* "OrientedGradientCalculator.pyx":50
  * 
  *     def _extend_img(self, orig_rows, orig_cols):
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],             # <<<<<<<<<<<<<<
@@ -3755,7 +3755,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 50, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":54
+  /* "OrientedGradientCalculator.pyx":54
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))
  * 
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],             # <<<<<<<<<<<<<<
@@ -3806,7 +3806,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "OrientedGradientCalculator.py":55
+  /* "OrientedGradientCalculator.pyx":55
  * 
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],
  *                                               (self._rotated.shape[0], self.radius)),             # <<<<<<<<<<<<<<
@@ -3881,7 +3881,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   }
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "OrientedGradientCalculator.py":56
+  /* "OrientedGradientCalculator.pyx":56
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],
  *                                               (self._rotated.shape[0], self.radius)),
  *                                    self._rotated,             # <<<<<<<<<<<<<<
@@ -3891,7 +3891,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_rotated); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "OrientedGradientCalculator.py":57
+  /* "OrientedGradientCalculator.pyx":57
  *                                               (self._rotated.shape[0], self.radius)),
  *                                    self._rotated,
  *                                    np.reshape(self._rotated[:, range(orig_cols - 1, orig_cols - self.radius - 1, -1)],             # <<<<<<<<<<<<<<
@@ -3941,7 +3941,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "OrientedGradientCalculator.py":58
+  /* "OrientedGradientCalculator.pyx":58
  *                                    self._rotated,
  *                                    np.reshape(self._rotated[:, range(orig_cols - 1, orig_cols - self.radius - 1, -1)],
  *                                               (self._rotated.shape[0], self.radius))))             # <<<<<<<<<<<<<<
@@ -4014,7 +4014,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":54
+  /* "OrientedGradientCalculator.pyx":54
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))
  * 
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],             # <<<<<<<<<<<<<<
@@ -4081,7 +4081,7 @@ static PyObject *__pyx_pf_26OrientedGradientCalculator_26OrientedGradientCalcula
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rotated, __pyx_t_1) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":49
+  /* "OrientedGradientCalculator.pyx":49
  *         return 0.5 * np.sum(np.divide(np.subtract(top, bottom) ** 2, divisor))
  * 
  *     def _extend_img(self, orig_rows, orig_cols):             # <<<<<<<<<<<<<<
@@ -4226,7 +4226,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "OrientedGradientCalculator.py":26
+  /* "OrientedGradientCalculator.pyx":26
  *     def _operate(self):
  *         out2 = np.array([(j, i) for j in range(0, self._rotated.shape[0]) for i in range(0, self._rotated.shape[1])])
  *         with Pool(8) as p:             # <<<<<<<<<<<<<<
@@ -4240,7 +4240,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "OrientedGradientCalculator.py":42
+  /* "OrientedGradientCalculator.pyx":42
  *             return 0
  *         top, dists = np.histogram(self._rotated[row - self.radius:row, col - self.radius:col + self.radius], 256,
  *                                   (0, 255))             # <<<<<<<<<<<<<<
@@ -4251,7 +4251,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "OrientedGradientCalculator.py":44
+  /* "OrientedGradientCalculator.pyx":44
  *                                   (0, 255))
  *         bottom, dists2 = np.histogram(self._rotated[row:row + self.radius, col - self.radius:col + self.radius], 256,
  *                                       (0, 255))             # <<<<<<<<<<<<<<
@@ -4262,7 +4262,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "OrientedGradientCalculator.py":50
+  /* "OrientedGradientCalculator.pyx":50
  * 
  *     def _extend_img(self, orig_rows, orig_cols):
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],             # <<<<<<<<<<<<<<
@@ -4273,7 +4273,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__5);
   __Pyx_GIVEREF(__pyx_slice__5);
 
-  /* "OrientedGradientCalculator.py":52
+  /* "OrientedGradientCalculator.pyx":52
  *         self._rotated = np.vstack((self._rotated[range(self.radius - 1, -1, -1), :],
  *                                    self._rotated,
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))             # <<<<<<<<<<<<<<
@@ -4284,7 +4284,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__6);
   __Pyx_GIVEREF(__pyx_slice__6);
 
-  /* "OrientedGradientCalculator.py":54
+  /* "OrientedGradientCalculator.pyx":54
  *                                    self._rotated[range(orig_rows - 1, orig_rows - self.radius - 1, -1), :]))
  * 
  *         self._rotated = np.hstack((np.reshape(self._rotated[:, range(self.radius - 1, -1, -1)],             # <<<<<<<<<<<<<<
@@ -4295,7 +4295,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__7);
   __Pyx_GIVEREF(__pyx_slice__7);
 
-  /* "OrientedGradientCalculator.py":57
+  /* "OrientedGradientCalculator.pyx":57
  *                                               (self._rotated.shape[0], self.radius)),
  *                                    self._rotated,
  *                                    np.reshape(self._rotated[:, range(orig_cols - 1, orig_cols - self.radius - 1, -1)],             # <<<<<<<<<<<<<<
@@ -4305,7 +4305,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__8);
   __Pyx_GIVEREF(__pyx_slice__8);
 
-  /* "OrientedGradientCalculator.py":11
+  /* "OrientedGradientCalculator.pyx":11
  * 
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):             # <<<<<<<<<<<<<<
@@ -4317,7 +4317,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__10);
   __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_init, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 11, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":17
+  /* "OrientedGradientCalculator.pyx":17
  *         self.hist_bins = 256
  * 
  *     def _rotate(self, angle):             # <<<<<<<<<<<<<<
@@ -4329,7 +4329,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__12);
   __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_rotate_2, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 17, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":24
+  /* "OrientedGradientCalculator.pyx":24
  *         self.mask = ndim.rotate(self.mask, angle)
  * 
  *     def _operate(self):             # <<<<<<<<<<<<<<
@@ -4341,7 +4341,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__14);
   __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_operate, 24, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 24, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":34
+  /* "OrientedGradientCalculator.pyx":34
  *             self._rotated = output
  * 
  *     def calculate(self):             # <<<<<<<<<<<<<<
@@ -4353,7 +4353,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__16);
   __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_calculate, 34, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 34, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":37
+  /* "OrientedGradientCalculator.pyx":37
  *         return self.adapt(self.angle)
  * 
  *     def _calculate_single_oriented_gradient2(self, args):             # <<<<<<<<<<<<<<
@@ -4365,7 +4365,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__18);
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_kacper_Projects_INZ_Clothe, __pyx_n_s_calculate_single_oriented_gradi, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 37, __pyx_L1_error)
 
-  /* "OrientedGradientCalculator.py":49
+  /* "OrientedGradientCalculator.pyx":49
  *         return 0.5 * np.sum(np.divide(np.subtract(top, bottom) ** 2, divisor))
  * 
  *     def _extend_img(self, orig_rows, orig_cols):             # <<<<<<<<<<<<<<
@@ -4494,7 +4494,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "OrientedGradientCalculator.py":1
+  /* "OrientedGradientCalculator.pyx":1
  * from multiprocessing.pool import Pool             # <<<<<<<<<<<<<<
  * 
  * import numpy as np
@@ -4513,7 +4513,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":3
+  /* "OrientedGradientCalculator.pyx":3
  * from multiprocessing.pool import Pool
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -4525,7 +4525,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":4
+  /* "OrientedGradientCalculator.pyx":4
  * 
  * import numpy as np
  * import scipy.signal as sig_filters             # <<<<<<<<<<<<<<
@@ -4543,7 +4543,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_sig_filters, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":5
+  /* "OrientedGradientCalculator.pyx":5
  * import numpy as np
  * import scipy.signal as sig_filters
  * from scipy import ndimage as ndim             # <<<<<<<<<<<<<<
@@ -4564,7 +4564,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":7
+  /* "OrientedGradientCalculator.pyx":7
  * from scipy import ndimage as ndim
  * 
  * from utils.RotationAdapter.RotationAdapter import RotationAdapter             # <<<<<<<<<<<<<<
@@ -4585,7 +4585,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "OrientedGradientCalculator.py":10
+  /* "OrientedGradientCalculator.pyx":10
  * 
  * 
  * class OrientedGradientCalculator(RotationAdapter):             # <<<<<<<<<<<<<<
@@ -4604,7 +4604,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_2, __pyx_n_s_OrientedGradientCalculator, __pyx_n_s_OrientedGradientCalculator, (PyObject *) NULL, __pyx_n_s_OrientedGradientCalculator, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "OrientedGradientCalculator.py":11
+  /* "OrientedGradientCalculator.pyx":11
  * 
  * class OrientedGradientCalculator(RotationAdapter):
  *     def __init__(self, img, radius, angle):             # <<<<<<<<<<<<<<
@@ -4616,7 +4616,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_init, __pyx_t_4) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":17
+  /* "OrientedGradientCalculator.pyx":17
  *         self.hist_bins = 256
  * 
  *     def _rotate(self, angle):             # <<<<<<<<<<<<<<
@@ -4628,7 +4628,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_rotate_2, __pyx_t_4) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":24
+  /* "OrientedGradientCalculator.pyx":24
  *         self.mask = ndim.rotate(self.mask, angle)
  * 
  *     def _operate(self):             # <<<<<<<<<<<<<<
@@ -4640,7 +4640,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_operate, __pyx_t_4) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":34
+  /* "OrientedGradientCalculator.pyx":34
  *             self._rotated = output
  * 
  *     def calculate(self):             # <<<<<<<<<<<<<<
@@ -4652,7 +4652,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_calculate, __pyx_t_4) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":37
+  /* "OrientedGradientCalculator.pyx":37
  *         return self.adapt(self.angle)
  * 
  *     def _calculate_single_oriented_gradient2(self, args):             # <<<<<<<<<<<<<<
@@ -4664,7 +4664,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_calculate_single_oriented_gradi, __pyx_t_4) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":49
+  /* "OrientedGradientCalculator.pyx":49
  *         return 0.5 * np.sum(np.divide(np.subtract(top, bottom) ** 2, divisor))
  * 
  *     def _extend_img(self, orig_rows, orig_cols):             # <<<<<<<<<<<<<<
@@ -4676,7 +4676,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   if (PyObject_SetItem(__pyx_t_3, __pyx_n_s_extend_img, __pyx_t_4) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "OrientedGradientCalculator.py":10
+  /* "OrientedGradientCalculator.pyx":10
  * 
  * 
  * class OrientedGradientCalculator(RotationAdapter):             # <<<<<<<<<<<<<<
@@ -4691,7 +4691,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientCalculator(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "OrientedGradientCalculator.py":1
+  /* "OrientedGradientCalculator.pyx":1
  * from multiprocessing.pool import Pool             # <<<<<<<<<<<<<<
  * 
  * import numpy as np

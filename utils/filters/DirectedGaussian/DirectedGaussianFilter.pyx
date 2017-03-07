@@ -1,6 +1,7 @@
-import scipy.ndimage.filters as filters
 import numpy as np
-from utils.filters.DirectedFilter import DirectedFilter
+import scipy.ndimage.filters as filters
+
+from utils.filters.abstract.DirectedFilter import DirectedFilter
 
 
 class DirectedGaussianFilter(DirectedFilter):

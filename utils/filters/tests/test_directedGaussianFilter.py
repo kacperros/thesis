@@ -1,8 +1,10 @@
+import time
 from copy import copy
 from unittest import TestCase
+
 import cv2
 
-from utils.filters.DirectedGaussianFilter import DirectedGaussianFilter
+from utils.filters.DirectedGaussian.DirectedGaussianFilter import DirectedGaussianFilter
 
 
 class TestDirectedGaussianFilter(TestCase):
@@ -14,7 +16,9 @@ class TestDirectedGaussianFilter(TestCase):
 
     def test_test1(self):
         object_under_test = DirectedGaussianFilter(self.img, 90, 1, (0, 1))
+        start_t = time.time()
         filtered = object_under_test.filter()
+        print(time.time() - start_t)
         cv2.imwrite('90_gaussian_1_01.png', filtered)
 
     def test_test2(self):

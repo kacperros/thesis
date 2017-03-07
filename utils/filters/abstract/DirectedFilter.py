@@ -1,5 +1,5 @@
 from utils.RotationAdapter.RotationAdapter import RotationAdapter
-from utils.filters.Filter import Filter
+from utils.filters.abstract.Filter import Filter
 
 
 class DirectedFilter(RotationAdapter, Filter):
