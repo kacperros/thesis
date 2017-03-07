@@ -1,5 +1,5 @@
-from utils.filters.DirectedGaussianFilter import DirectedGaussianFilter
-from utils.filters.GaussiansDifferenceFilter import GaussiansDifferenceFilter
+from utils.filters.DirectedGaussian.DirectedGaussianFilter import DirectedGaussianFilter
+from utils.filters.GaussiansDifference.GaussiansDifferenceFilter import GaussiansDifferenceFilter
 
 
 class OrientedGradientTSubhandler:

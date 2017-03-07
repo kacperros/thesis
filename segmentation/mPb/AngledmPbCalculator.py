@@ -1,12 +1,12 @@
 from copy import copy
 from multiprocessing import Queue, Process
-import cv2
+
 import numpy as np
 
-from segmentation.channel_handlers.OrientedGradientLHandler import OrientedGradientLHandler
-from segmentation.channel_handlers.OrientedGradientTHandler import OrientedGradientTHandler
-from segmentation.channel_handlers.OrientedGradientaHandler import OrientedGradientaHandler
-from segmentation.channel_handlers.OrientedGradientbHandler import OrientedGradientbHandler
+from segmentation.channel_handlers.Lab.L.OrientedGradientLHandler import OrientedGradientLHandler
+from segmentation.channel_handlers.Lab.a.OrientedGradientaHandler import OrientedGradientaHandler
+from segmentation.channel_handlers.Lab.b.OrientedGradientbHandler import OrientedGradientbHandler
+from segmentation.channel_handlers.T.handler.OrientedGradientTHandler import OrientedGradientTHandler
 
 
 def _calculate_with_handler(handler, img, radius, angle, i, j, queue):

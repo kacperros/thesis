@@ -1,6 +1,6 @@
 import cv2
 
-from segmentation.channel_handlers.abstract.OrientedGradientChannelHandler import OrientedGradientChannelHandler
+from segmentation.channel_handlers.Channel.OrientedGradientChannelHandler import OrientedGradientChannelHandler
 
 
 class OrientedGradientLHandler(OrientedGradientChannelHandler):
