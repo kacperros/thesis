@@ -14,7 +14,7 @@ class RotationAdapter:
         pass
 
     def _rotate_back(self, angle):
-        self._rotated = ndim.rotate(self._rotated, -1 * angle, mode='nearest')
+        self._rotated = ndim.rotate(self._rotated, -1 * angle)
         orows, ocols = self.original.shape[0], self.original.shape[1]
         nrows, ncols = self._rotated.shape[0], self._rotated.shape[1]
         return self._rotated[int(np.ceil(nrows / 2 - orows / 2)): int(np.ceil(nrows / 2 + orows / 2)),
