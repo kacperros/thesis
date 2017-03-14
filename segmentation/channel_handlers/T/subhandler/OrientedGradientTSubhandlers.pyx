@@ -13,12 +13,10 @@ class OrientedGradientTOrientedGaussianSubhandler(OrientedGradientTSubhandler):
         self.order = order
         self.angle = angle
 
-    def handle(self, queue):
+    def handle(self):
         filtered = DirectedGaussianFilter(self.img, self.angle, self.sigma, self.order)
         self.img = filtered.filter()
-        # print('Done DG ' + str(self.sigma) + ' ' + str(self.order) + ' ' + str(self.angle))
-        queue.put([self.img, self.sigma, self.order, self.angle, True])
-        return 0
+        return [self.img, self.sigma, self.order, self.angle, True]
 
 
 class OrientedGradientTGaussianDifferenceSubhandler(OrientedGradientTSubhandler):
@@ -28,9 +26,7 @@ class OrientedGradientTGaussianDifferenceSubhandler(OrientedGradientTSubhandler)
         self.orders = orders
         self.angles = [0, 0]
 
-    def handle(self, queue):
+    def handle(self):
         filtered = GaussiansDifferenceFilter(self.img, self.sigmas, self.orders, self.angles)
-        # print('Done GD' + str(self.sigmas) + ' ' + str(self.orders) + ' ' + str(self.angles))
         self.img = filtered.filter()
-        queue.put([self.img, self.sigmas, self.orders, self.angles, False])
-        return 0
+        return [self.img, self.sigmas, self.orders, self.angles, False]
