@@ -16,5 +16,5 @@ class OrientedGradientChannelHandler(ChannelHandler):
         pass
 
     def handle(self):
-        gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle)
+        gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle, 32)
         return gradinet_calculator.calculate()

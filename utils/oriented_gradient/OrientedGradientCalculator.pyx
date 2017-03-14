@@ -8,11 +8,11 @@ from utils.RotationAdapter.RotationAdapter import RotationAdapter
 
 
 class OrientedGradientCalculator(RotationAdapter):
-    def __init__(self, img, radius, angle):
+    def __init__(self, img, radius, angle, bins):
         RotationAdapter.__init__(self, img)
         self.radius = radius
         self.angle = angle
-        self.bins = 16
+        self.bins = bins
 
     def _rotate(self, angle):
         self._rotated = np.copy(self.original)

@@ -959,6 +959,7 @@ static PyObject *__pyx_n_s_utils_oriented_gradient_Oriented;
 static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientChannelHandler___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_img, PyObject *__pyx_v_radius, PyObject *__pyx_v_angle); /* proto */
 static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientChannelHandler_2_set_image(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientChannelHandler_4handle(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_int_32;
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_tuple__5;
@@ -1229,7 +1230,7 @@ static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientCha
  *         pass
  * 
  *     def handle(self):             # <<<<<<<<<<<<<<
- *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle)
+ *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle, 32)
  *         return gradinet_calculator.calculate()
  */
 
@@ -1264,7 +1265,7 @@ static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientCha
   /* "OrientedGradientChannelHandler.pyx":19
  * 
  *     def handle(self):
- *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle)             # <<<<<<<<<<<<<<
+ *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle, 32)             # <<<<<<<<<<<<<<
  *         return gradinet_calculator.calculate()
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_OrientedGradientCalculator); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
@@ -1289,8 +1290,8 @@ static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientCha
   }
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
-    PyObject *__pyx_temp[4] = {__pyx_t_6, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
+    PyObject *__pyx_temp[5] = {__pyx_t_6, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_int_32};
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1300,8 +1301,8 @@ static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientCha
   #endif
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-    PyObject *__pyx_temp[4] = {__pyx_t_6, __pyx_t_3, __pyx_t_4, __pyx_t_5};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
+    PyObject *__pyx_temp[5] = {__pyx_t_6, __pyx_t_3, __pyx_t_4, __pyx_t_5, __pyx_int_32};
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -1310,7 +1311,7 @@ static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientCha
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 19, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(4+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 19, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     if (__pyx_t_6) {
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -1321,6 +1322,9 @@ static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientCha
     PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_8, 2+__pyx_t_7, __pyx_t_5);
+    __Pyx_INCREF(__pyx_int_32);
+    __Pyx_GIVEREF(__pyx_int_32);
+    PyTuple_SET_ITEM(__pyx_t_8, 3+__pyx_t_7, __pyx_int_32);
     __pyx_t_3 = 0;
     __pyx_t_4 = 0;
     __pyx_t_5 = 0;
@@ -1334,7 +1338,7 @@ static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientCha
 
   /* "OrientedGradientChannelHandler.pyx":20
  *     def handle(self):
- *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle)
+ *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle, 32)
  *         return gradinet_calculator.calculate()             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
@@ -1366,7 +1370,7 @@ static PyObject *__pyx_pf_30OrientedGradientChannelHandler_30OrientedGradientCha
  *         pass
  * 
  *     def handle(self):             # <<<<<<<<<<<<<<
- *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle)
+ *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle, 32)
  *         return gradinet_calculator.calculate()
  */
 
@@ -1475,7 +1479,7 @@ static int __Pyx_InitCachedConstants(void) {
  *         pass
  * 
  *     def handle(self):             # <<<<<<<<<<<<<<
- *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle)
+ *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle, 32)
  *         return gradinet_calculator.calculate()
  */
   __pyx_tuple__5 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_gradinet_calculator); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 18, __pyx_L1_error)
@@ -1491,6 +1495,7 @@ static int __Pyx_InitCachedConstants(void) {
 
 static int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
+  __pyx_int_32 = PyInt_FromLong(32); if (unlikely(!__pyx_int_32)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -1678,7 +1683,7 @@ PyMODINIT_FUNC PyInit_OrientedGradientChannelHandler(void)
  *         pass
  * 
  *     def handle(self):             # <<<<<<<<<<<<<<
- *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle)
+ *         gradinet_calculator = OrientedGradientCalculator(self.img, self.radius, self.angle, 32)
  *         return gradinet_calculator.calculate()
  */
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_30OrientedGradientChannelHandler_30OrientedGradientChannelHandler_5handle, 0, __pyx_n_s_OrientedGradientChannelHandler_h, NULL, __pyx_n_s_OrientedGradientChannelHandler, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 18, __pyx_L1_error)

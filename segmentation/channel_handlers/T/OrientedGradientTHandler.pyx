@@ -24,7 +24,8 @@ class OrientedGradientTHandler(OrientedGradientChannelHandler):
         self.__parallel_filter()
         self.__combine_images()
         texton_img = self.__set_textons()
-        return OrientedGradientCalculator(texton_img, self.radius, self.angle).calculate()
+        texton_img = (texton_img / 32) * 255
+        return OrientedGradientCalculator(texton_img, self.radius, self.angle, 256).calculate()
 
     def __parallel_filter(self):
         orders = [(1, 1) for i in range(0, 8)]
